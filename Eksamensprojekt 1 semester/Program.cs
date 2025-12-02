@@ -26,3 +26,4 @@ app.MapRazorPages()
 app.Run();
 
 Console.WriteLine("hej");
+Console.WriteLine("hej med dig");

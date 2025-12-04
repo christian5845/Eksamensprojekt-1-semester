@@ -2,7 +2,7 @@
 
 namespace Eksamensprojekt_1_semester.MockData
 {
-    public class MockMembers
+    public class MockBookings
     {
         private static List<Member> _members = new List<Member>
     {

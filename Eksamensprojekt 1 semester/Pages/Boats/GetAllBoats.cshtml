@@ -1,0 +1,45 @@
+﻿@page
+@model Eksamensprojekt_1_semester.Pages.Boats.GetAllBoatsModel
+@{
+}
+
+<h1>Boats</h1>
+
+<table class="table table-bordered table-hover table-striped">
+	<thead>
+		<tr>
+			<th>
+				Id
+			</th>
+			<th>
+				Type
+			</th>
+			<th>
+				Size
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		@if (Model.Boats != null)
+		{
+			foreach (var boat in Model.Boats)
+			{
+				<tr>
+					<td>
+						@boat.Id
+					</td>
+					<td>
+						@boat.Type
+					</td>
+					<td>
+						@boat.Size
+					</td>
+				</tr>
+			}
+		}
+	</tbody>
+</table>
+
+<p>
+    <a asp-page="CreateBoat" class="btn btn-primary">Add New Boat</a>
+</p>

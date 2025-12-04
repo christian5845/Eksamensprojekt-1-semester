@@ -4,3 +4,38 @@
     ViewData["title"] = "Bookede både";
 }
 <h1>@ViewData["title"]</h1>
+
+<table class="table table-bordered table-hover table-striped">
+	<thead>
+		<tr>
+			<th>
+				Name
+			</th>
+			<th>
+				Date
+			</th>
+			<th>
+				Boat Type
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		@if (Model.Booking != null)
+		{
+			foreach (var booking in Model.Booking)
+			{
+				<tr>
+					<td>
+						@booking.Name
+					</td>
+					<td>
+						@booking.Date
+					</td>
+					<td>
+						@booking.BookedBoat.Type
+					</td>
+				</tr>
+			}
+		}
+	</tbody>
+</table>

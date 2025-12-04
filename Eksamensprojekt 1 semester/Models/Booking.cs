@@ -6,13 +6,15 @@
         public string Name { get; set; }
         public string Date { get; set; }
         public double Price { get; set; }
+        public Boat BookedBoat { get; }
 
         public Booking() { }
 
-        public Booking(string name, string date)
+        public Booking(string name, string date, Boat bookedboat)
         {
             Name = name;
             Date = date;
+            BookedBoat = bookedboat;
         }
        
     }

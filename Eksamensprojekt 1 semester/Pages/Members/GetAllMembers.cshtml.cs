@@ -11,7 +11,7 @@ namespace Eksamensprojekt_1_semester.Pages.Members
 
         public void OnGet()
         {
-            Members = MockMembers.GetMockMembers();
+            Members = MockBookings.GetMockMembers();
         }
     }
 }

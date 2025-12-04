@@ -2,15 +2,15 @@
 
 namespace Eksamensprojekt_1_semester.Models
 {
-    public class Boats 
+    public class Boat 
     {
         public int Id { get; set; }
         public string Type { get; set; }
         public string Size { get; set; }
 
-        public Boats() { }
+        public Boat() { }
     
-    public Boats(int id, string type, string size)
+    public Boat(int id, string type, string size)
         {
             Id = id;
             Type = type;

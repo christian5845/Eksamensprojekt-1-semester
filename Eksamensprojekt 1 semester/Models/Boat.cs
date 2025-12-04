@@ -16,5 +16,7 @@ namespace Eksamensprojekt_1_semester.Models
             Type = type;
             Size = size;
         }
+   
     }
+
 }

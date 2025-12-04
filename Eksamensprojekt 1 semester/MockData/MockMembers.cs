@@ -6,9 +6,9 @@ namespace Eksamensprojekt_1_semester.MockData
     {
         private static List<Member> _members = new List<Member>
     {
-        new Member(1, "Anna", 19),
-        new Member(2, "Oliver", 21),
-        new Member(3, "louise", 24)
+        new Member(1, "Anna", 19, "12 34 56 78", "anna@example.com"),
+        new Member(2, "Oliver", 21, "87 65 43 21", "oliver@example.com"),
+        new Member(3, "Louise", 24, "11 22 33 44", "louise@example.com")
     };
         public static List<Member> GetMockMembers() { return _members; }
     }

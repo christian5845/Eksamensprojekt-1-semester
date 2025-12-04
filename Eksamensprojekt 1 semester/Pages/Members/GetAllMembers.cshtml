@@ -1,0 +1,40 @@
+﻿@page
+@model Eksamensprojekt_1_semester.Pages.Members.GetAllMembersModel
+@{
+}
+<h1>Members</h1>
+
+<table class="table table-bordered table-hover table-striped">
+	<thead>
+		<tr>
+			<th>
+				Id
+			</th>
+			<th>
+				Name
+			</th>
+			<th>
+				Age
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		@if (Model.Members != null)
+		{
+			foreach (var member in Model.Members)
+			{
+				<tr>
+					<td>
+						@member.Id
+					</td>
+					<td>
+						@member.Name
+					</td>
+					<td>
+						@member.Age
+					</td>
+				</tr>
+			}
+		}
+	</tbody>
+</table>

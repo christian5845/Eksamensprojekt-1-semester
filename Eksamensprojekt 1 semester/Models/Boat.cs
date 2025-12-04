@@ -1,20 +1,19 @@
 ﻿using System.Text;
 
-namespace Eksamensprojekt_1_semester.Models
-{
-    public class Boat 
-    {
-        public int Id { get; set; }
-        public string Type { get; set; }
-        public string Size { get; set; }
+namespace Eksamensprojekt_1_semester.Models;
 
-        public Boat() { }
-    
-    public Boat(int id, string type, string size)
-        {
-            Id = id;
-            Type = type;
-            Size = size;
-        }
+public class Boat 
+{
+    public int Id { get; set; }
+    public string Type { get; set; }
+    public string Size { get; set; }
+
+    public Boat() { }
+
+public Boat(int id, string type, string size)
+    {
+        Id = id;
+        Type = type;
+        Size = size;
     }
 }

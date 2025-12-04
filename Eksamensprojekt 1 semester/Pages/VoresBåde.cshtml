@@ -3,16 +3,25 @@
 @{
     ViewData["title"] = "Vores både";
 }
-<h1>@ViewData["title"]</h1>
-@foreach (var båd in Model.Både)
-{
-<div class="card">
-    <div class="container">
-        <h4><b>@båd.Navn</b></h4>
-        <p>@båd.Beskrivelse</p>
-        <b>Specifikationer:</b>
-        <p>Længde: @båd.Længde</p>
-        <p>Bredde @båd.Bredde</p>
-    </div>
-</div> 
-}
+<head >
+    <h1 >@ViewData["title"]</h1>
+</head>
+
+<body>
+    <p>
+        Hillerød Sejlklub er en klub for jollesejlere.
+        Vi har altid plads til børn og voksne, som vil sejle for deres fornøjelses skyld, for det sociale samvær, og evt. selv medvirke eller støtte andre sejlere i konkurrencesejlads.
+    </p>
+    @foreach (var båd in Model.Boats)
+    {
+        <div class="card">
+            <div class="container">
+                <h4><b>@båd.Navn</b></h4>
+                <p>@båd.Beskrivelse</p>
+                <b>Specifikationer:</b>
+                <p>Længde: @båd.Længde</p>
+                <p>Bredde @båd.Bredde</p>
+            </div>
+        </div>
+    }
+</body>

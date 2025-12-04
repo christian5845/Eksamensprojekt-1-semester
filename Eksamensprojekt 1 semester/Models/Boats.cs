@@ -8,10 +8,7 @@ namespace Eksamensprojekt_1_semester.Models
         public string Type { get; set; }
         public string Size { get; set; }
 
-        public Boats() // NB: Nødvendig fordi vi er i en Razor Pages app.
-        {
-            ErAktiv = true;
-        }
+        public Boats() { }
     
     public Boats(int id, string type, string size)
         {

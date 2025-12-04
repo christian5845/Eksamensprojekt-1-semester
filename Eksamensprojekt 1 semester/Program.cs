@@ -1,7 +1,11 @@
+using Eksamensprojekt_1_semester.Services.Interfaces;
+using Eksamensprojekt_1_semester.Services.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddSingleton<IBoatRepository, BoatRepository>();
 
 var app = builder.Build();
 

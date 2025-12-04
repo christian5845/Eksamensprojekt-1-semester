@@ -1,0 +1,18 @@
+﻿@page
+@model Eksamensprojekt_1_semester.Pages.PHBådemedbeskrivelserModel
+@{
+    ViewData["title"] = "Vores både";
+}
+<h1>@ViewData["title"]</h1>
+@foreach (var båd in Model.Både)
+{
+<div class="card">
+    <div class="container">
+        <h4><b>@båd.Navn</b></h4>
+        <p>@båd.Beskrivelse</p>
+        <b>Specifikationer:</b>
+        <p>Længde: @båd.Længde</p>
+        <p>Bredde @båd.Bredde</p>
+    </div>
+</div> 
+}

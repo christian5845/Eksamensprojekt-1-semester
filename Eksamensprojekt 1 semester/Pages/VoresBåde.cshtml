@@ -14,13 +14,16 @@
     </p>
     @foreach (var båd in Model.Boats)
     {
-        <div class="card">
-            <div class="container">
-                <h4><b>@båd.Type</b></h4>
-                <p>Indsæt reference til beskrivelse af båd her</p>
-                <b>Specifikationer:</b>
-                <p>Størrelse: @båd.Size</p>
-            </div>
-        </div>
+       if(!Model.BoatTypes.Contains(båd.Type))
+       {     Model.AddType(båd.Type);
+            <div class="card">
+                <div class="container">
+                    <h4><b>@båd.Type</b></h4>
+                    <p>Indsæt reference til beskrivelse af båd her</p>
+                    <b>Specifikationer:</b>
+                    <p>Størrelse: @båd.Size</p>
+                </div>
+             </div>
+       }
     }
 </body>

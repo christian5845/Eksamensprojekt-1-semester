@@ -12,7 +12,10 @@ namespace Eksamensprojekt_1_semester.MockData
         };
         public static List<Booking> GetMockBooking() { return _booking; }
 
-
+        public static void AddABooking(Booking booking)
+        {
+            _booking.Add(booking);
+        }
 
     }
 }

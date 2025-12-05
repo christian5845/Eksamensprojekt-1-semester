@@ -1,0 +1,47 @@
+﻿@page
+@model Eksamensprojekt_1_semester.Pages.Bookings.BookABoatModel
+@{
+}
+<h1>Book en båd</h1>
+
+<table class="table table-bordered table-hover table-striped">
+	<thead>
+		<tr>
+			<th>
+				Model
+			</th>
+			<th>
+				Størrelse
+			</th>
+			<th>
+				Pris Pr. Dag
+			</th>
+			<th>
+				Book både
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		@if (Model.BookABoat != null)
+		{
+			foreach (var boat in Model.BookABoat)
+			{
+				<tr>
+					<td>
+						@boat.Type
+					</td>
+					<td>
+						@boat.Size
+					</td>
+					<td>
+						@boat.PricePerDay
+					</td>
+					<td>
+						<a class="btn btn-primary btn-sm" type="button" title="Book denne båd"
+						   asp-page="CreateABooking" asp-route-id="@boat.Id">Book denne båd</a>
+					</td>
+				</tr>
+			}
+		}
+	</tbody>
+</table>

@@ -13,5 +13,13 @@ namespace Eksamensprojekt_1_semester.MockData
             new Boat(5, "FLOATY", "Lille", 600.0),
         };
         public static List<Boat> GetMockBoats() { return _boats; }
+
+        public static void AddABoat(Boat boat)
+        {
+            _boats.Add(boat);
+        }
     }
+
+
 }
+

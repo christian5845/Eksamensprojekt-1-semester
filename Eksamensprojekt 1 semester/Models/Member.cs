@@ -39,4 +39,5 @@ namespace Eksamensprojekt_1_semester.Models;
         PhoneNumber = phoneNumber;
         Email = email;
     }
+   
 }

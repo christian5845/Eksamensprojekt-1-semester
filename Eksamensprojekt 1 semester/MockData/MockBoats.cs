@@ -14,8 +14,4 @@ namespace Eksamensprojekt_1_semester.MockData
         };
         public static List<Boat> GetMockBoats() { return _boats; }
     }
-
-    public static List<MockBoats> GetMockBoats() { return Boats; }
-
-
 }

@@ -21,6 +21,8 @@ namespace Eksamensprojekt_1_semester.Services.Repositories
         { 
         _members.Add(member);
         }
+
+
         public IEnumerable<Member> NameSearch(string str)
         {
             List<Member> nameSearch = new List<Member>();
@@ -58,6 +60,19 @@ namespace Eksamensprojekt_1_semester.Services.Repositories
                     return m;
             }
             return null; 
+        }
+        public Member DeleteMember(int id)
+        {
+            foreach(Member member in _members)
+                { 
+                if 
+                    (member.Id == id) 
+                { 
+                    _members.Remove(member);
+                    return member;
+                } 
+            }
+            return null;
         }
 
     }

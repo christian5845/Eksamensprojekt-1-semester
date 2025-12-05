@@ -5,9 +5,9 @@
 <h1>Delete Confirmation></h1>
 
 <div class="alert alert-danger">
-    <h5>Are you sure you want to delete Item - @Model.Member.Name</h5>
+    <h5>Er du sikker på at du vil slette medlemmet? - @Model.Member.Name</h5>
     <form method="post">
-        <button type="submit" class="btn btn-danger">Yes</button>
-        <a class="btn btn-primary" asp-page="/Members/GetAllMembers">No</a>
+        <button type="submit" class="btn btn-danger">Ja</button>
+        <a class="btn btn-primary" asp-page="/Members/GetAllMembers">Nej</a>
     </form>
 </div>

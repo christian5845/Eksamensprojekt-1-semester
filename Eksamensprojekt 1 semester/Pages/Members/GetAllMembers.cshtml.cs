@@ -11,11 +11,20 @@ namespace Eksamensprojekt_1_semester.Pages.Members
     {
         public List<Member> Members { get; private set; }
 
+        [BindProperty]
+        public string SearchString { get; set; }
+
         private IMemberRepository _memberRepository;
 
         public GetAllMembersModel(IMemberRepository memberRepository)
         {
             _memberRepository =  memberRepository;
+        }
+
+        public IActionResult OnPostNameSearch()
+        {
+            Members = _memberRepository.NameSearch(SearchString).ToList();
+            return Page();
         }
 
         public void OnGet()

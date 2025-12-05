@@ -1,26 +1,23 @@
+using Eksamensprojekt_1_semester.Models;
+using Eksamensprojekt_1_semester.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Eksamensprojekt_1_semester.Models;
-using Eksamensprojekt_1_semester.MockData;
-using Eksamensprojekt_1_semester.Services.Repositories;
-using Eksamensprojekt_1_semester.Services.Interfaces;
-namespace Eksamensprojekt_1_semester.Pages.Booking;
+
+namespace Eksamensprojekt_1_semester.Pages.Bookings;
 
 public class CreateABookingModel : PageModel
 {
     private IBookABoatRepository _iBookABoatRepository;
-    
+
     [BindProperty]
-    public Booking Booking;
-
-    public void OnGet()
-    {
-
-    }
-
+    public Booking BookedBoat { get; set; }
     public CreateABookingModel(IBookABoatRepository iBookABoatRepository)
+        {
+            _iBookABoatRepository = iBookABoatRepository;
+        }
+    public IActionResult OnGet()
     {
-        _iBookABoatRepository = iBookABoatRepository;
+        return Page();
     }
 
     public IActionResult OnPost()
@@ -30,7 +27,7 @@ public class CreateABookingModel : PageModel
             return Page();
         }
 
-        _iBookABoatRepository.AddABoat(boat);
+        _iBookABoatRepository.AddABooking(BookedBoat);
         return RedirectToPage("GetAllMembers");
     }
 }

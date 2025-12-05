@@ -7,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddSingleton<IBoatRepository, BoatRepository>();
 builder.Services.AddSingleton<IMemberRepository, MemberRepository>();
+builder.Services.AddSingleton<IBookABoatRepository, BookABoatRepository>();
 
 var app = builder.Build();
 
@@ -32,6 +33,3 @@ app.MapRazorPages()
 
 app.Run();
 
-Console.WriteLine("hej");
-Console.WriteLine("hej med dig");
-Console.WriteLine("Halløj");

@@ -4,6 +4,6 @@ namespace Eksamensprojekt_1_semester.Services.Interfaces
 {
     public interface IBookABoatRepository
     {
-        void AddABoat(Boat boat);
+        void AddABooking(Booking booking);
     }
 }

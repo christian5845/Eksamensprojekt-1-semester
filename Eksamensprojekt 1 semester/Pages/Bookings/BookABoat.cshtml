@@ -1,5 +1,5 @@
 ﻿@page
-@model Eksamensprojekt_1_semester.Pages.Booking.BookABoatModel
+@model Eksamensprojekt_1_semester.Pages.Bookings.BookABoatModel
 @{
 }
 <h1>Book en båd</h1>
@@ -15,6 +15,9 @@
 			</th>
 			<th>
 				Pris Pr. Dag
+			</th>
+			<th>
+				Book både
 			</th>
 		</tr>
 	</thead>
@@ -32,6 +35,10 @@
 					</td>
 					<td>
 						@boat.PricePerDay
+					</td>
+					<td>
+						<a class="btn btn-primary btn-sm" type="button" title="Book denne båd"
+						   asp-page="CreateABooking" asp-route-id="@boat.Id">Book denne båd</a>
 					</td>
 				</tr>
 			}

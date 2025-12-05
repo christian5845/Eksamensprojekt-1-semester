@@ -5,10 +5,9 @@ namespace Eksamensprojekt_1_semester.Services.Repositories
 {
     public class BookABoatRepository : IBookABoatRepository
     {
-        public void AddABoat(Boat boat)
+        public void AddABooking(Booking booking)
         {
-            MockBoats.AddABoat(boat);
+            MockBooking.AddABooking(booking);
         }
-
     }
 }

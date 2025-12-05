@@ -5,6 +5,30 @@
 
 <h1>Boats</h1>
 
+<form method="post">
+	<div class="input-group mb-3">
+		<input asp-for="SearchType" class="form-control mr-1" 
+			   placeholder="Søg type" />
+		<input type="submit" asp-page-handler="TypeSearch" 
+			   value="Søg" class="btn btn-primary" />
+	</div>
+</form>
+
+<form method="post">
+	<div class="input-group mb-3">
+		<div class="input-group-prepend">
+			<span class="input-group-text">Min</span>
+		</div>
+		<input asp-for="MinPrice" class="form-control mr-1" />
+		<div class="input-group-prepend">
+            <span class="input-group-text">Max</span>
+		</div>
+		<input asp-for="MaxPrice" class="form-control mr-1" />
+		<input type="submit" asp-page-handler="PriceFilter"
+               value="Filtrer" class="btn btn-primary" />
+	</div>
+</form>
+
 <table class="table table-bordered table-hover table-striped">
 	<thead>
 		<tr>
@@ -15,7 +39,10 @@
 				Type
 			</th>
 			<th>
-				Size
+				Størrelse
+			</th>
+			<th>
+				Pris per dag
 			</th>
 		</tr>
 	</thead>
@@ -33,6 +60,15 @@
 					</td>
 					<td>
 						@boat.Size
+					</td>
+					<td>
+						@boat.PricePerDay
+					</td>
+					<td>
+						<a class="btn btn-primary btn-sm" type="button" title="Edit"
+                           asp-page="EditBoat" asp-route-id="@boat.Id">Edit</a>
+						<a class="btn btn-danger btn-sm" type="button" title="Slet"
+                           asp-page="DeleteBoat" asp-route-id="@boat.Id">Slet</a>
 					</td>
 				</tr>
 			}

@@ -1,13 +1,22 @@
-﻿using System.Text;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Text;
 
 namespace Eksamensprojekt_1_semester.Models;
 
 public class Boat 
 {
-    public int Id { get; set; }
-    public string Type { get; set; }
-    public string Size { get; set; }
-    public double PricePerDay { get; set; }
+    [Display(Name = "Båd ID")]
+    [Required(ErrorMessage = "Der skal angives et ID")]
+    public int? Id { get; set; }
+    [Display(Name = "Båd Type")]
+    [Required(ErrorMessage = "Der skal angives en bådtype")]
+    public string? Type { get; set; }
+    [Display(Name = "Båd Størrelse")]
+    [Required(ErrorMessage = "Der skal angives en bådstørrelse")]
+    public string? Size { get; set; }
+    [Display(Name = "Pris per dag")]
+    [Required(ErrorMessage = "Der skal angives en pris per dag")]
+    public double? PricePerDay { get; set; }
 
     public Boat() { }
 

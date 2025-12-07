@@ -14,4 +14,5 @@ public class BookABoatModel : PageModel
     {
         BookABoat = MockBoats.GetMockBoats();
     }
+
 }

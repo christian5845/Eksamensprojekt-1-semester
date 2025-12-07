@@ -6,7 +6,7 @@
         public string Name { get; set; }
         public string Date { get; set; }
         public double Price { get; set; }
-        public Boat BookedBoat { get; }
+        public Boat BookedBoat { get; set; } // Changed from get-only to get; set;
 
         public Booking() { }
 

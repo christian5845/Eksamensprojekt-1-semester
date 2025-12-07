@@ -7,4 +7,8 @@
     <RootNamespace>Eksamensprojekt_1_semester</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Include="Services\Json\JsonFileMemberService.cs" />
+  </ItemGroup>
+
 </Project>

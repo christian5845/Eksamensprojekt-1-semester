@@ -20,5 +20,6 @@ namespace Eksamensprojekt_1_semester.MockData
             _bookings.Add(booking);
         }
 
+        
     }
 }

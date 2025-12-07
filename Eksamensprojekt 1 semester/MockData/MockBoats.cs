@@ -18,6 +18,18 @@ namespace Eksamensprojekt_1_semester.MockData
         {
             _boats.Add(boat);
         }
+
+        public static Boat? GetBoat(int boatID)
+        {
+            foreach(Boat boat in _boats)
+            {
+                if(boat.Id==boatID)
+                {
+                    return boat;
+                }
+            }
+            return null;
+        }
     }
 
 

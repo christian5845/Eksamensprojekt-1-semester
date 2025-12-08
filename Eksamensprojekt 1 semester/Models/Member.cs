@@ -4,9 +4,10 @@ namespace Eksamensprojekt_1_semester.Models;
 
     public class Member
 {
+    public static int _globalMemberID = 0;
     [Display(Name = "Medlems ID")]
-    [Required(ErrorMessage = "Der skal angives et ID til medlemmet")]
-    [Range(1, 10000, ErrorMessage = "ID skal være mellem {1} og {2}")]
+    //[Required(ErrorMessage = "Der skal angives et ID til medlemmet")]
+    //[Range(1, 10000, ErrorMessage = "ID skal være mellem {1} og {2}")]
     public int? Id { get; set; }
 
     [Display(Name = "Navn")]
@@ -31,9 +32,8 @@ namespace Eksamensprojekt_1_semester.Models;
 
     public Member() { }
 
-    public Member(int id, string name, int age, string phoneNumber, string email)
+    public Member(string name, int age, string phoneNumber, string email)
     {
-        Id = id;
         Name = name;
         Age = age;
         PhoneNumber = phoneNumber;

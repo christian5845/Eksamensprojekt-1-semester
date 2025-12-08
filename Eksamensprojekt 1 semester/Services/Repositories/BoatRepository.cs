@@ -6,6 +6,7 @@ namespace Eksamensprojekt_1_semester.Services.Repositories
 {
     public class BoatRepository : IBoatRepository
     {
+        protected int BoatIDCounter = 0;
         private List<Boat> _boats;
 
         public BoatRepository()
@@ -20,6 +21,8 @@ namespace Eksamensprojekt_1_semester.Services.Repositories
 
         public void AddBoat(Boat boat)
         {
+            BoatIDCounter++;
+            boat.Id = BoatIDCounter;
             _boats.Add(boat);
         }
 

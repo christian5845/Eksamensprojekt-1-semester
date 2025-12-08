@@ -6,6 +6,7 @@ namespace Eksamensprojekt_1_semester.Services.Repositories
 {
   public class MemberRepository : IMemberRepository
   {
+    protected int MemberIDCounter = 0;
     private List<Member> _members;
 
     private JsonFileMemberService _jsonFileMemberService;
@@ -26,8 +27,10 @@ namespace Eksamensprojekt_1_semester.Services.Repositories
 
     public void AddMember(Member member)
     {
-      _members.Add(member);
-      _jsonFileMemberService.SaveJsonMembers(_members);
+        MemberIDCounter++;
+        member.Id = MemberIDCounter;
+        _members.Add(member);
+        _jsonFileMemberService.SaveJsonMembers(_members);
     }
 
     public IEnumerable<Member> NameSearch(string str)

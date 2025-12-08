@@ -6,6 +6,7 @@ namespace Eksamensprojekt_1_semester.Services.Repositories
 {
     public class BookABoatRepository : IBookABoatRepository
     {
+        protected static int GlobalBookingID = 0;   
         private List<Booking> _booking;
 
         public BookABoatRepository()
@@ -14,6 +15,8 @@ namespace Eksamensprojekt_1_semester.Services.Repositories
         }
         public void AddABooking(Booking booking)
         {
+            GlobalBookingID++;
+            booking.BookingId = GlobalBookingID;
             _booking.Add(booking);
         }
 

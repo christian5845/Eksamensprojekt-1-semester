@@ -6,7 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-builder.Services.AddSingleton<IBoatRepository, BoatRepository>();
+builder.Services.AddSingleton<IBoatRepository, BoatRepository>(); //Singleton opretter kun en instans af BoatRepository i hele applikationens levetid.
+builder.Services.AddTransient<JsonFileBoatService>(); //Transient opretter en ny instance hver gang den bliver requested.
 
 builder.Services.AddTransient<JsonFileMemberService>();
 builder.Services.AddSingleton<IMemberRepository, MemberRepository>();

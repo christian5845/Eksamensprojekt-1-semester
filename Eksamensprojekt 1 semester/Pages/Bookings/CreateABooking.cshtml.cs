@@ -29,7 +29,6 @@ public class CreateABookingModel : PageModel
 
     public IActionResult OnPost()
     {
-    
         AddBoatToBooking(TheBookedBoat);
         _iBookABoatRepository.AddABooking(TheBooking);
         return RedirectToPage("BookedBoats");

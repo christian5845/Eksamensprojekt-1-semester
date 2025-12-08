@@ -16,7 +16,7 @@ public class Boat
     public string? Size { get; set; }
     [Display(Name = "Pris per dag")]
     [Required(ErrorMessage = "Der skal angives en pris per dag")]
-    public double? PricePerDay { get; set; }
+    public double PricePerDay { get; set; }
 
     public Boat() { }
 

@@ -8,7 +8,14 @@
         public DateOnly DateEnd { get; set; }
         public double Price { get; set; }
         public Boat BookedBoat { get; set; } // Changed from get-only to get; set;
-
+        public double TotalPris
+        {
+            get
+            {
+                int antalDage = (DateEnd.DayNumber - DateStart.DayNumber) + 1;
+                return antalDage * (BookedBoat.PricePerDay);
+            }
+        }
         public Booking() { }
 
         public Booking(string name, DateOnly datestart, DateOnly dateend, Boat bookedboat)

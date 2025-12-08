@@ -9,7 +9,7 @@
 		<input asp-for="SearchString" class="form-control mr-1"
 			   placeholder="Enter search term" />
 		<input type="submit" asp-page-handler="NameSearch"
-			   value="Search" class="btn btn-primary" />
+			   value="Søg" class="btn btn-primary" />
 	</div>
 </form>
 
@@ -56,10 +56,10 @@
 						@member.Email
 					</td>
 					<td>
-						<a class="btn btn-primary btn-sm" type="button" title="Edit"
-						   asp-page="EditMembers" asp-route-id="@member.Id">Edit</a>
-						<a class="btn btn-danger btn-sm" type="button" title="Delete"
-						   asp-page="DeleteMembers" asp-route-id="@member.Id">Delete</a>
+						<a class="btn btn-primary btn-sm" type="button" title="Rediger"
+						   asp-page="EditMembers" asp-route-id="@member.Id">Rediger</a>
+						<a class="btn btn-danger btn-sm" type="button" title="Slet"
+						   asp-page="DeleteMembers" asp-route-id="@member.Id">Slet</a>
 
 					</td>
 
@@ -70,5 +70,5 @@
 </table>
 
 <p>
-	<a class="btn btn-primary" asp-page="CreateMembers">Add Member</a>
+	<a class="btn btn-primary" asp-page="CreateMembers">Tilføj Medlem</a>
 </p>

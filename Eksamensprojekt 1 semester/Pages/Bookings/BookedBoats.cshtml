@@ -9,16 +9,19 @@
 	<thead>
 		<tr>
 			<th>
-				ID
-			</th>
-			<th>
 				Navn
 			</th>
 			<th>
-				Dato
+				Dato start
+			</th>
+			<th>
+				Dato slut
 			</th>
 			<th>
 				Båd type
+			</th>
+			<th>
+                Total pris
 			</th>
 		</tr>
 	</thead>
@@ -35,10 +38,16 @@
 						@booking.Name
 					</td>
 					<td>
-						@booking.Date
+						@booking.DateStart
+					</td>
+					<td>
+						@booking.DateEnd
 					</td>
 					<td>
 						@booking.BookedBoat.Type
+					</td>
+					<td>
+						@booking.TotalPris
 					</td>
 					<td>
 						

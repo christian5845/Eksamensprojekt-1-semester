@@ -4,14 +4,19 @@
 }
 <form method="post">
     <div class="form-group">
-        <label asp-for="TheBooking.Name" class="control-label"></label>
+        <label asp-for="TheBooking.Name" class="control-label">Navn</label>
         <input asp-for="TheBooking.Name" class="form-control" />
         <span asp-validation-for="TheBooking.Name" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="TheBooking.Date" class="control-label"></label>
-        <input asp-for="TheBooking.Date" type="date" class="form-control" />
-        <span asp-validation-for="TheBooking.Date" class="text-danger"></span>
+        <label asp-for="TheBooking.DateStart" class="control-label">Dato start</label>
+        <input asp-for="TheBooking.DateStart" type="date" class="form-control" />
+        <span asp-validation-for="TheBooking.DateStart" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="TheBooking.DateEnd" class="control-label">Dato slut</label>
+        <input asp-for="TheBooking.DateEnd" type="date" class="form-control" />
+        <span asp-validation-for="TheBooking.DateEnd" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="TheBookedBoat.Type" class="control-label"></label>
@@ -31,10 +36,10 @@
 
     <p>
         <div class="form-group">
-            <input type="submit" value="Create" class="btn btn-primary" />
+            <input type="submit" value="Opret" class="btn btn-primary" />
         </div>
     </p>
 </form>
 <p>
-    <a asp-page="BookABoat">Back to List</a>
+    <a asp-page="BookABoat">Tilbage til listen</a>
 </p>

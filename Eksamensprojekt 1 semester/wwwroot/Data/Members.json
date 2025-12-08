@@ -75,5 +75,12 @@
     "Age": 26,
     "PhoneNumber": "51422661",
     "Email": "Madsenrasmus48@gmail.com"
+  },
+  {
+    "Id": 1,
+    "Name": "w3r",
+    "Age": 3,
+    "PhoneNumber": "345",
+    "Email": "rgd@hej.dk"
   }
 ]

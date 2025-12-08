@@ -4,17 +4,17 @@
     {
         public int BookingId { get; set; }
         public string Name { get; set; }
-        public DateTime Date { get; set; }
-        public double? Price { get { return BookedBoat.PricePerDay; } }
+        public DateOnly Date { get; set; }
+        public double Price { get; set; }
         public Boat BookedBoat { get; set; } // Changed from get-only to get; set;
 
         public Booking() { }
 
-        public Booking(string name, DateTime date, Boat bookedboat)
+        public Booking(string name, DateOnly date, Boat bookedboat)
         {
             Name = name;
-            Date = new DateTime(date.Year, date.Month, date.Day);
             BookedBoat = bookedboat;
+            Date = date;
         }
        
     }

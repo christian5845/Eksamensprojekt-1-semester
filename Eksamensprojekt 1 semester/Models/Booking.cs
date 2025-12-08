@@ -1,26 +1,21 @@
-﻿namespace Eksamensprojekt_1_semester.Models;
-
-public class Booking
+﻿namespace Eksamensprojekt_1_semester.Models
 {
-    private static object sync = new object();
-    private static int _globalCount;
-    public int BookingId { get; set; }
-    public string Name { get; set; }
-    public DateTime Date { get; set; }
-    public double? Price { get { return BookedBoat.PricePerDay; } }
-    public Boat BookedBoat { get; set; } // Changed from get-only to get; set;
+    public class Booking
+    {
+        public int BookingId { get; set; }
+        public string Name { get; set; }
+        public DateOnly Date { get; set; }
+        public double Price { get; set; }
+        public Boat BookedBoat { get; set; } // Changed from get-only to get; set;
 
     public Booking() { }
 
-    public Booking(string name, DateTime date, Boat bookedboat)
-    {
-        lock(sync)
+        public Booking(string name, DateOnly date, Boat bookedboat)
         {
-            BookingId = ++_globalCount;
+            Name = name;
+            BookedBoat = bookedboat;
+            Date = date;
         }
-        Name = name;
-        Date = new DateTime(date.Year, date.Month, date.Day);
-        BookedBoat = bookedboat;
+       
     }
-   
 }

@@ -34,6 +34,7 @@ public class CreateABookingModel : PageModel
         _iBookABoatRepository.AddABooking(TheBooking);
         return RedirectToPage("BookedBoats");
     }
+  
 
     public void AddBoatToBooking(Boat boat)
     {

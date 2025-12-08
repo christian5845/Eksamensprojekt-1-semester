@@ -13,7 +13,7 @@
             get
             {
                 int antalDage = (DateEnd.DayNumber - DateStart.DayNumber) + 1;
-                return antalDage * (BookedBoat.PricePerDay);
+                return antalDage * (BookedBoat?.PricePerDay ?? 0);
             }
         }
         public Booking() { }

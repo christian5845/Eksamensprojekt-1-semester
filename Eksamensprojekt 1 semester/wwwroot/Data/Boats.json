@@ -22,5 +22,11 @@
     "Type": "Sejlb\u00E5d",
     "Size": "Mellem",
     "PricePerDay": 800
+  },
+  {
+    "Id": 1,
+    "Type": "cg",
+    "Size": "df",
+    "PricePerDay": 76
   }
 ]

@@ -18,17 +18,6 @@
                 return antalDage * (BookedBoat?.PricePerDay ?? 0);
             }
         }
-
-
-        public bool ErAnkommet()
-        {
-            if (!AnkommetHjem)
-            {
-                AnkommetHjem = true;
-                return true;
-            }
-            return true;
-        }
         public Booking() { }
 
         public Booking(string name, DateOnly datestart, DateOnly dateend, string destination, Boat bookedboat)

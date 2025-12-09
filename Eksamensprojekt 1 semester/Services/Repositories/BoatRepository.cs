@@ -1,6 +1,7 @@
 ﻿using Eksamensprojekt_1_semester.Models;
 using Eksamensprojekt_1_semester.MockData;
 using Eksamensprojekt_1_semester.Services.Interfaces;
+using Eksamensprojekt_1_semester.Services.Json;
 
 namespace Eksamensprojekt_1_semester.Services.Repositories
 {
@@ -8,6 +9,15 @@ namespace Eksamensprojekt_1_semester.Services.Repositories
     {
         protected int BoatIDCounter = 0;
         private List<Boat> _boats;
+
+        private JsonFileBoatService JsonFileBoatService { get; set; }
+
+        public BoatRepository(JsonFileBoatService jsonFileBoatService)
+        {
+            JsonFileBoatService = jsonFileBoatService;
+            //_boats = MockBoats.GetMockBoats();
+            _boats = JsonFileBoatService.GetJsonBoats().ToList();
+        }
 
         public BoatRepository()
         {
@@ -24,6 +34,7 @@ namespace Eksamensprojekt_1_semester.Services.Repositories
             BoatIDCounter++;
             boat.Id = BoatIDCounter;
             _boats.Add(boat);
+            JsonFileBoatService.SaveJsonBoats(_boats);
         }
 
         public Boat GetBoat(int id)
@@ -50,21 +61,29 @@ namespace Eksamensprojekt_1_semester.Services.Repositories
                         b.PricePerDay = boat.PricePerDay;
                     }
                 }
+                JsonFileBoatService.SaveJsonBoats(_boats);
             }
         }
 
         public Boat DeleteBoat (int? boatId)
         {
+            Boat boatToBeDeleted = null;
             foreach (Boat boat in _boats)
             {
                 if (boat.Id == boatId)
                 {
-                    _boats.Remove(boat);
-                    return boat;
+                    boatToBeDeleted = boat;
+                    break;
                 }
             }
 
-            return null;
+            if (boatToBeDeleted != null)
+            {
+                _boats.Remove(boatToBeDeleted);
+                JsonFileBoatService.SaveJsonBoats(_boats);
+            }
+
+            return boatToBeDeleted;
         }
 
         public IEnumerable<Boat> GetBoatByType(string type)

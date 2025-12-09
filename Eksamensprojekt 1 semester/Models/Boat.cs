@@ -6,8 +6,8 @@ namespace Eksamensprojekt_1_semester.Models;
 public class Boat 
 {
     private static int _globalBoatID;
-    [Display(Name = "Båd ID")]
-    [Required(ErrorMessage = "Der skal angives et ID")]
+    //[Display(Name = "Båd ID")]
+    //[Required(ErrorMessage = "Der skal angives et ID")]
     public int? Id { get; set; }
     [Display(Name = "Båd Type")]
     [Required(ErrorMessage = "Der skal angives en bådtype")]

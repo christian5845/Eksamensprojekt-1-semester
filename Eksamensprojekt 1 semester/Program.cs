@@ -13,6 +13,9 @@ builder.Services.AddTransient<JsonFileMemberService>();
 builder.Services.AddSingleton<IMemberRepository, MemberRepository>();
 builder.Services.AddSingleton<IBookABoatRepository, BookABoatRepository>();
 
+builder.Services.AddTransient<JsonFileIDLogService>();
+builder.Services.AddSingleton<IIDLogRepository, IDLogRepository>();
+
 var app = builder.Build();  // <-- ONLY ONE Build call
 
 // Configure the HTTP request pipeline.

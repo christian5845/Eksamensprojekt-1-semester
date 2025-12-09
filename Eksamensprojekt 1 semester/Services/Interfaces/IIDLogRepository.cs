@@ -2,11 +2,7 @@
 
 public interface IIDLogRepository
 {
-    int GetBoatID();
-    void ReturnUpdatedBoatID();
-    int GetMemberID();
-    void ReturnUpdatedMemberID();
-    int GetBookingID();
-    void ReturnUpdatedBookingID();
-
+    int GetNewBoatID();
+    int GetNewMemberID();
+    int GetNewBookingID();
 }

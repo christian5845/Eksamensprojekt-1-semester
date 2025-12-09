@@ -15,6 +15,5 @@ namespace Eksamensprojekt_1_semester.Services.Interfaces
         Member GetMember(int id);
 
         Member DeleteMember(int id);
-
     }
 }

@@ -1,5 +1,53 @@
-﻿namespace Eksamensprojekt_1_semester.Services.Repositories;
+﻿using Eksamensprojekt_1_semester.Models;
+using Eksamensprojekt_1_semester.Services.Interfaces;
+using Eksamensprojekt_1_semester.Services.Json;
 
-public class IDLogRepository
+namespace Eksamensprojekt_1_semester.Services.Repositories
 {
+    public class IDLogRepository : IIDLogRepository
+    {
+        #region Instancefields
+        private List<IDLog> _iDLog;
+        private JsonFileIDLogService _jsonFileIDLogService;
+        #endregion
+
+        #region Constructor
+        public IDLogRepository(JsonFileIDLogService jsonFileIDLogService)
+        {
+            _jsonFileIDLogService = jsonFileIDLogService;
+            _iDLog = _jsonFileIDLogService.GetJsonIDLog().ToList();
+        }
+
+        public int GetNewBoatID()
+        {
+            foreach(IDLog iDLog in _iDLog)
+            {
+                iDLog.BoatID++;
+                _jsonFileIDLogService.SaveJsonIDLog(_iDLog);
+                return iDLog.BoatID;
+            }
+            return 0;
+        }
+
+        public int GetNewBookingID()
+        {
+            foreach (IDLog iDLog in _iDLog)
+            {
+                iDLog.BookingID++;
+                return iDLog.BookingID;
+            }
+            return 0;
+        }
+
+        public int GetNewMemberID()
+        {
+            foreach (IDLog iDLog in _iDLog)
+            {
+                iDLog.MemberID++;
+                return iDLog.MemberID;
+            }
+            return 0;
+        }
+        #endregion
+    }
 }

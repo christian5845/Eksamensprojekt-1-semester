@@ -1,26 +1,5 @@
 [
   {
-    "Id": 1,
-    "Name": "Anna",
-    "Age": 19,
-    "PhoneNumber": "12 34 56 78",
-    "Email": "anna@example.com"
-  },
-  {
-    "Id": 2,
-    "Name": "Oliver",
-    "Age": 21,
-    "PhoneNumber": "87 65 43 21",
-    "Email": "oliver@example.com"
-  },
-  {
-    "Id": 3,
-    "Name": "Louise",
-    "Age": 24,
-    "PhoneNumber": "11 22 33 44",
-    "Email": "louise@example.com"
-  },
-  {
     "Id": 4,
     "Name": "sasha",
     "Age": 23,

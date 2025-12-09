@@ -19,6 +19,12 @@
 				Dato slut
 			</th>
 			<th>
+				Destination
+			</th>
+			<th>
+				Ankommet hjem?
+			</th>
+			<th>
 				Båd type
 			</th>
 			<th>
@@ -26,6 +32,9 @@
 			</th>
 			<th>
 				Slet booking
+			</th>
+			<th class="fst-italic">
+				Handlinger
 			</th>
 		</tr>
 	</thead>
@@ -46,6 +55,12 @@
 						@booking.DateEnd
 					</td>
 					<td>
+						@booking.Destination
+					</td>
+					<td>
+						@(booking.AnkommetHjem ? "Ja" : "Nej")
+					</td>
+					<td>
 						@booking.BookedBoat.Type
 					</td>
 					<td>
@@ -56,6 +71,14 @@
 						<a class="btn btn-danger btn-sm" type="button" title="Slet din booking"
 						   asp-page="DeleteBooking" asp-route-name="@booking.Name">Slet din booking</a>
 
+					</td>
+					<td>
+						<form method="post">
+							<input type="hidden" name="name" value="@booking.Name" />
+							<button type="submit" asp-page-handler="Toggle" class="btn btn-primary btn-sm">
+								@(booking.AnkommetHjem ? "Sæt til Ikke Ankommet" : "Marker som Ankommet")
+							</button>
+						</form>
 					</td>
 				</tr>
 			}

@@ -9,6 +9,11 @@
         <span asp-validation-for="TheBooking.Name" class="text-danger"></span>
     </div>
     <div class="form-group">
+        <label asp-for="TheBooking.Destination" class="control-label">Destination</label>
+        <input asp-for="TheBooking.Destination" class="form-control" />
+        <span asp-validation-for="TheBooking.Destination" class="text-danger"></span>
+    </div>
+    <div class="form-group">
         <label asp-for="TheBooking.DateStart" class="control-label">Dato start</label>
         <input asp-for="TheBooking.DateStart" type="date" class="form-control" />
         <span asp-validation-for="TheBooking.DateStart" class="text-danger"></span>

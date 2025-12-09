@@ -44,10 +44,12 @@ namespace Eksamensprojekt_1_semester.Services.Repositories
             foreach (IDLog iDLog in _iDLog)
             {
                 iDLog.MemberID++;
+                _jsonFileIDLogService.SaveJsonIDLog(_iDLog);
                 return iDLog.MemberID;
             }
             return 0;
         }
+
         #endregion
     }
 }

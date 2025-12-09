@@ -1,20 +1,5 @@
 [
   {
-    "Id": 4,
-    "Name": "sasha",
-    "Age": 23,
-    "PhoneNumber": "23232323",
-    "Email": "sasha@gmail.com"
-  },
-  
-  {
-    "Id": 1,
-    "Name": "Rasmus Madsen",
-    "Age": 26,
-    "PhoneNumber": "51422661",
-    "Email": "Madsenrasmus48@gmail.com"
-  },
-  {
     "Id": 1,
     "Name": "Rasmus Madsen",
     "Age": 26,
@@ -23,16 +8,9 @@
   },
   {
     "Id": 2,
-    "Name": "Rasmus Madsen",
-    "Age": 26,
-    "PhoneNumber": "51422661",
-    "Email": "Madsenrasmus48@gmail.com"
-  },
-  {
-    "Id": 1,
-    "Name": "w3r",
-    "Age": 3,
-    "PhoneNumber": "345",
-    "Email": "rgd@hej.dk"
+    "Name": "sara wolff",
+    "Age": 23,
+    "PhoneNumber": "12321332",
+    "Email": "sara@gmail.com"
   }
 ]

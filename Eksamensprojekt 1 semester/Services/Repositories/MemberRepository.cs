@@ -23,22 +23,25 @@ public class MemberRepository : IMemberRepository
         .GetJsonMembers()
         .ToList();
 }
-    #endregion
+  #endregion
 
-    #region Methods
-    public List<Member> GetMembers()
-    {
-        return _members;
-    }
+  #region Methods
+  public List<Member> GetMembers()
+  {
+    return _members.OrderBy(m => m.Id).ToList();
+  }
 
-    public void AddMember(Member member)
-    {
-        member.Id = _iDLogRepository.GetNewMemberID();
-        _members.Add(member);
-        _jsonFileMemberService.SaveJsonMembers(_members);
-    }
 
-    public IEnumerable<Member> NameSearch(string str)
+  public void AddMember(Member member)
+  {
+    member.Id = _members.Count == 0 ? 1 : _members.Max(m => m.Id.Value) + 1;
+    _members.Add(member);
+    _jsonFileMemberService.SaveJsonMembers(_members);
+  }
+
+
+
+  public IEnumerable<Member> NameSearch(string str)
     {
         List<Member> nameSearch = new List<Member>();
         foreach (Member member in _members)
@@ -82,25 +85,29 @@ public class MemberRepository : IMemberRepository
         return null;
     }
 
-    public Member DeleteMember(int id)
+  public Member DeleteMember(int id)
+  {
+    Member memberToDelete = _members.FirstOrDefault(m => m.Id == id);
+
+    if (memberToDelete != null)
     {
-        Member memberToDelete = null;
+      _members.Remove(memberToDelete);
 
-        foreach (Member member in _members)
-        {
-            if (member.Id == id)
-            {
-                memberToDelete = member;
-                break;
-            }
-        }
+      // SORTER EFTER ID
+      _members = _members.OrderBy(m => m.Id).ToList();
 
-        if (memberToDelete != null)
-        {
-            _members.Remove(memberToDelete);
-            _jsonFileMemberService.SaveJsonMembers(_members);
-        }
-        return memberToDelete;
-}
-    #endregion
+      // GENNUMMERÉR ID'er
+      for (int i = 0; i < _members.Count; i++)
+      {
+        _members[i].Id = i + 1;
+      }
+
+      // GEM MED NYE ID'er
+      _jsonFileMemberService.SaveJsonMembers(_members);
+    }
+
+    return memberToDelete;
+  }
+
+  #endregion
 }

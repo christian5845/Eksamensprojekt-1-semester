@@ -25,7 +25,7 @@ public class MemberRepository : IMemberRepository
 }
   #endregion
 
-  #region Methods
+    #region Methods
   public List<Member> GetMembers()
   {
     return _members.OrderBy(m => m.Id).ToList();

@@ -8,5 +8,8 @@ namespace Eksamensprojekt_1_semester.Services.Interfaces
         Booking DeleteBooking(string name);
         List<Booking> GetBookedBoats();
         Booking GetBookedBoats(string name);
+
+        List<Boat> GetBoats();
+        Boat GetBoat(int id);
     }
 }

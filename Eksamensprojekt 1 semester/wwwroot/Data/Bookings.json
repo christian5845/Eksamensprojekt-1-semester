@@ -1,0 +1,34 @@
+[
+  {
+    "BookingId": 1,
+    "Name": "Rasmus",
+    "DateStart": "2025-12-10",
+    "DateEnd": "2025-12-12",
+    "Destination": "Oslo",
+    "AnkommetHjem": false,
+    "Price": 0,
+    "BookedBoat": {
+      "Id": null,
+      "Type": "Fiskerb\u00E5d",
+      "Size": "Mellem",
+      "PricePerDay": 800
+    },
+    "TotalPris": 2400
+  },
+  {
+    "BookingId": 1,
+    "Name": "Rasmus",
+    "DateStart": "2025-12-14",
+    "DateEnd": "2025-12-17",
+    "Destination": "Gdansk",
+    "AnkommetHjem": false,
+    "Price": 0,
+    "BookedBoat": {
+      "Id": null,
+      "Type": "Jolle",
+      "Size": "Lille",
+      "PricePerDay": 300
+    },
+    "TotalPris": 1200
+  }
+]

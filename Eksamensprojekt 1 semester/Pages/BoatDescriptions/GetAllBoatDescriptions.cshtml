@@ -1,5 +1,5 @@
 ﻿@page
-@model Eksamensprojekt_1_semester.Pages.OurBoats.GetOurBoatsModel
+@model Eksamensprojekt_1_semester.Pages.BoatDescriptions.GetAllBoatDescriptionsModel
 @{
     ViewData["title"] = "Vores både";
 }
@@ -24,7 +24,12 @@
                     <b>Specifikationer:</b>
                     <p>Størrelse: @båd.Size</p>
                 </div>
+                <div>
+                    <a class="btn btn-primary btn-sm" type="button" title="Rediger"
+                       asp-page="EditBoatDescriptions" asp-route-id="@båd.Id">Rediger</a>
+                </div>
             </div>
+            
         }
     }
 </body>

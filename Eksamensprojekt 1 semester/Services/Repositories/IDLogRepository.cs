@@ -18,6 +18,7 @@ namespace Eksamensprojekt_1_semester.Services.Repositories
             _iDLog = _jsonFileIDLogService.GetJsonIDLog().ToList();
         }
 
+        #region Methods
         public int GetNewBoatID()
         {
             foreach(IDLog iDLog in _iDLog)

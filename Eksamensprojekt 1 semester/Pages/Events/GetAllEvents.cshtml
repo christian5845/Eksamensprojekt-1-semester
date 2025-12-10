@@ -1,0 +1,68 @@
+﻿@page
+@model Eksamensprojekt_1_semester.Pages.Events.GetAllEventsModel
+@{
+}
+<h1>Begivenheder</h1>
+
+<form method="post">
+	<div class="input-group mb-3">
+		<input asp-for="SearchString" class="form-control mr-1"
+			   placeholder="Søg navn" />
+		<input type="submit" asp-page-handler="NameSearch"
+			   value="Søg" class="btn btn-primary" />
+	</div>
+</form>
+
+<table class="table table-bordered table-hover table-striped">
+	<thead>
+		<tr>
+			<th>
+				Id
+			</th>
+			<th>
+				Begivenhed
+			</th>
+			<th>
+                Type
+			</th>
+			<th>
+                Pris pr. deltager
+            </th>
+		</tr>
+	</thead>
+	<tbody>
+		@if (Model.Events != null)
+		{
+			// "event" is a C# keyword, so I use. "evt" instead
+			foreach (var evt in Model.Events)
+			{
+				<tr>
+					<td>
+						@evt.Id
+					</td>
+					<td>
+						@evt.Name
+					</td>
+					<td>
+						@evt.Type
+					</td>
+					<td>
+						@evt.Price
+					</td>
+
+					<td>
+						<a class="btn btn-primary btn-sm" type="button" title="Rediger"
+						   asp-page="EditEvents" asp-route-id="@evt.Id">Rediger</a>
+						<a class="btn btn-danger btn-sm" type="button" title="Slet"
+						   asp-page="DeleteEvents" asp-route-id="@evt.Id">Slet</a>
+					</td>
+				</tr>
+			}
+		}
+	</tbody>
+</table>
+
+<p>
+	<a class="btn btn-primary" asp-page="CreateEvents">Tilføj Begivenhed</a>
+</p>
+

@@ -1,0 +1,32 @@
+﻿@page
+@model Eksamensprojekt_1_semester.Pages.Events.CreateEventsModel
+@{
+}
+<form method="post">
+     <div class="form-group">
+        <label asp-for="Event.Id" class="control-label"></label>
+        <input asp-for="Event.Id" class="form-control" />
+        <span asp-validation-for="Event.Id" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Event.Name" class="control-label"></label>
+        <input asp-for="Event.Name" class="form-control" />
+        <span asp-validation-for="Event.Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Event.Type" class="control-label"></label>
+        <input asp-for="Event.Type" class="form-control" />
+        <span asp-validation-for="Event.Type" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Event.Price" class="control-label"></label>
+        <input asp-for="Event.Price" class="form-control" />
+        <span asp-validation-for="Event.Price" class="text-danger"></span>
+    </div>
+    <p>
+        <div class="form-group">
+            <input type="submit" value="Opret begivenhed" class="btn btn-primary" />
+        </div>
+    </p>
+</form>
+

@@ -12,6 +12,8 @@ builder.Services.AddTransient<JsonFileBoatService>(); //Transient opretter en ny
 builder.Services.AddTransient<JsonFileMemberService>();
 builder.Services.AddSingleton<IMemberRepository, MemberRepository>();
 builder.Services.AddSingleton<IBookABoatRepository, BookABoatRepository>();
+builder.Services.AddSingleton<IEventRepository, EventRepository>();
+
 
 var app = builder.Build();  // <-- ONLY ONE Build call
 

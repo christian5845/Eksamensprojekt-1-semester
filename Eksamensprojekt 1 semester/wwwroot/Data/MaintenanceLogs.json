@@ -1,0 +1,37 @@
+[
+  {
+    "Id": 1,
+    "Type": "Fiskerbåd",
+    "RepairCount": 4,
+    "Age": 12,
+    "LastServiced": "2023-01-15"
+  },
+  {
+    "Id": 2,
+    "Type": "Jolle",
+    "RepairCount": 1,
+    "Age": 5,
+    "LastServiced": "2022-11-20"
+  },
+  {
+    "Id": 3,
+    "Type": "Sejlbåd",
+    "RepairCount": 2,
+    "Age": 8,
+    "LastServiced": "2023-03-10"
+  },
+  {
+    "Id": 4,
+    "Type": "Lyst Jolle",
+    "RepairCount": 0,
+    "Age": 2,
+    "LastServiced": "2023-05-05"
+  },
+  {
+    "Id": 5,
+    "Type": "Motorbåd",
+    "RepairCount": 3,
+    "Age": 10,
+    "LastServiced": "2022-12-30"
+  }
+]

@@ -50,6 +50,16 @@ namespace Eksamensprojekt_1_semester.Services.Repositories
             return 0;
         }
 
+        public int GetNewLogID()
+        {
+            foreach (IDLog iDLog in _iDLog)
+            {
+                iDLog.LogID++;
+                _jsonFileIDLogService.SaveJsonIDLog(_iDLog);
+                return iDLog.LogID;
+            }
+            return 0;
+        }
         #endregion
     }
 }

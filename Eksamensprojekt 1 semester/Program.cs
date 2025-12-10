@@ -14,6 +14,10 @@ builder.Services.AddSingleton<IMemberRepository, MemberRepository>();
 builder.Services.AddSingleton<IBookABoatRepository, BookABoatRepository>();
 builder.Services.AddSingleton<IEventRepository, EventRepository>();
 
+builder.Services.AddTransient<JsonFileBookingService>();
+
+builder.Services.AddTransient<JsonFileIDLogService>();
+builder.Services.AddSingleton<IIDLogRepository, IDLogRepository>();
 
 var app = builder.Build();  // <-- ONLY ONE Build call
 

@@ -1,13 +1,13 @@
-﻿using System.Text.Json;
-using Eksamensprojekt_1_semester.Models;
+﻿using Eksamensprojekt_1_semester.Models;
+using System.Text.Json;
 
 namespace Eksamensprojekt_1_semester.Services.Json;
 
-public class JsonFileMemberService
+public class JsonFileIDLogService
 {
     public IWebHostEnvironment WebHostEnvironment { get; }
 
-    public JsonFileMemberService(IWebHostEnvironment webHostEnvironment)
+    public JsonFileIDLogService(IWebHostEnvironment webHostEnvironment)
     {
         WebHostEnvironment = webHostEnvironment;
     }
@@ -17,20 +17,20 @@ public class JsonFileMemberService
         get
         {
             return Path.Combine(WebHostEnvironment.WebRootPath,
-                "Data", "Members.json");
+                "Data", "IDFile.json");
         }
     }
 
-    public IEnumerable<Member> GetJsonMembers()
+    public IEnumerable<IDLog> GetJsonIDLog()
     {
         using (StreamReader jsonFileReader = File.OpenText(JsonFileName))
         {
-            return JsonSerializer.Deserialize<Member[]>(
+            return JsonSerializer.Deserialize<IDLog[]>(
                 jsonFileReader.ReadToEnd());
         }
     }
 
-    public void SaveJsonMembers(List<Member> members)
+    public void SaveJsonIDLog(List<IDLog> iDs)
     {
         using (FileStream jsonFileWriter = File.Create(JsonFileName))
         {
@@ -42,9 +42,9 @@ public class JsonFileMemberService
                     Indented = true
                 });
 
-            JsonSerializer.Serialize<Member[]>(
+            JsonSerializer.Serialize<IDLog[]>(
                 jsonWriter,
-                members.ToArray());
+                iDs.ToArray());
         }
     }
 }

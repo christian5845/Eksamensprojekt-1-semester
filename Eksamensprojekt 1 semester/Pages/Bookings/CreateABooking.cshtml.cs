@@ -21,7 +21,7 @@ public class CreateABookingModel : PageModel
         }
     public IActionResult OnGet(int id)
     {
-        TheBookedBoat = MockBoats.GetBoat(id);
+        TheBookedBoat = _iBookABoatRepository.GetBoat(id);
         if (TheBookedBoat == null)
             return RedirectToPage("/BookABoat");
         return Page();

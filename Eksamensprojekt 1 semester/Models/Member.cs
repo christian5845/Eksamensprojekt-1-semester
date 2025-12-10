@@ -4,7 +4,6 @@ namespace Eksamensprojekt_1_semester.Models;
 
     public class Member
 {
-    public static int _globalMemberID = 0;
     [Display(Name = "Medlems ID")]
     //[Required(ErrorMessage = "Der skal angives et ID til medlemmet")]
     //[Range(1, 10000, ErrorMessage = "ID skal være mellem {1} og {2}")]

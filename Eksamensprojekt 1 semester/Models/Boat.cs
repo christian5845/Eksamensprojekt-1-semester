@@ -5,7 +5,6 @@ namespace Eksamensprojekt_1_semester.Models;
 
 public class Boat 
 {
-    private static int _globalBoatID;
     //[Display(Name = "Båd ID")]
     //[Required(ErrorMessage = "Der skal angives et ID")]
     public int? Id { get; set; }
@@ -23,7 +22,6 @@ public class Boat
 
 public Boat(string type, string size, double pricePerDay)
     {
-        Id = ++_globalBoatID;
         Type = type;
         Size = size;
         PricePerDay = pricePerDay;

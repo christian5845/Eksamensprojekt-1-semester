@@ -6,8 +6,10 @@
         public string Name { get; set; }
         public DateOnly DateStart { get; set; }
         public DateOnly DateEnd { get; set; }
+        public string Destination { get; set; }
+        public bool AnkommetHjem { get; set; }
         public double Price { get; set; }
-        public Boat BookedBoat { get; set; } // Changed from get-only to get; set;
+        public Boat BookedBoat { get; set; }
         public double TotalPris
         {
             get
@@ -18,13 +20,14 @@
         }
         public Booking() { }
 
-        public Booking(string name, DateOnly datestart, DateOnly dateend, Boat bookedboat)
+        public Booking(string name, DateOnly datestart, DateOnly dateend, string destination, Boat bookedboat)
         {
             Name = name;
             BookedBoat = bookedboat;
             DateStart = datestart;
             DateEnd = dateend;
+            Destination = destination;
+            AnkommetHjem = false;
         }
-       
     }
 }

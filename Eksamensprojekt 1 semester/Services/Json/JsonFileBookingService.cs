@@ -3,22 +3,22 @@ using System.Text.Json;
 
 namespace Eksamensprojekt_1_semester.Services.Json;
 
-public class JsonFileBoatService
+public class JsonFileBookingService
 {
     public IWebHostEnvironment WebHostEnvironment { get; }
 
     //Dependency Injection
-    public JsonFileBoatService(IWebHostEnvironment webHostEnvironment)
+    public JsonFileBookingService(IWebHostEnvironment webHostEnvironment)
     {
         WebHostEnvironment = webHostEnvironment;
     }
 
     private string JsonFileName
     {
-        get { return Path.Combine(WebHostEnvironment.WebRootPath, "Data", "Boats.json"); }
+        get { return Path.Combine(WebHostEnvironment.WebRootPath, "Data", "Bookings.json"); }
     }
 
-    public void SaveJsonBoats(List<Boat> boats)
+    public void SaveJsonBookings(List<Booking> bookings)
     {
         using (FileStream jsonFileWriter = File.Create(JsonFileName))
         {
@@ -27,15 +27,15 @@ public class JsonFileBoatService
                 SkipValidation = false,
                 Indented = true
             });
-            JsonSerializer.Serialize<Boat[]>(jsonWriter, boats.ToArray());
+            JsonSerializer.Serialize<Booking[]>(jsonWriter, bookings.ToArray());
         }
     }
 
-    public IEnumerable<Boat> GetJsonBoats()
+    public IEnumerable<Booking> GetJsonBookings()
     {
         using (StreamReader jsonFileReader = File.OpenText(JsonFileName))
         {
-            return JsonSerializer.Deserialize<Boat[]>(jsonFileReader.ReadToEnd());
+            return JsonSerializer.Deserialize<Booking[]>(jsonFileReader.ReadToEnd());
         }
     }
 }

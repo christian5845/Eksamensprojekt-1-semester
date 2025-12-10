@@ -1,5 +1,4 @@
 ﻿using Eksamensprojekt_1_semester.Models;
-using Eksamensprojekt_1_semester.MockData;
 using Eksamensprojekt_1_semester.Services.Interfaces;
 using Eksamensprojekt_1_semester.Services.Json;
 
@@ -20,11 +19,6 @@ public class BoatRepository : IBoatRepository
         _boats = JsonFileBoatService.GetJsonBoats().ToList();
 
     }
-
-    //public BoatRepository()
-    //{
-    //    _boats = MockBoats.GetMockBoats();
-    //}
 
     public List<Boat> GetBoats()
     {

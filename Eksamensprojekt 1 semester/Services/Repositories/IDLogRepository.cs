@@ -17,6 +17,7 @@ namespace Eksamensprojekt_1_semester.Services.Repositories
             _jsonFileIDLogService = jsonFileIDLogService;
             _iDLog = _jsonFileIDLogService.GetJsonIDLog().ToList();
         }
+        #endregion
 
         #region Methods
         public int GetNewBoatID()
@@ -50,7 +51,6 @@ namespace Eksamensprojekt_1_semester.Services.Repositories
             }
             return 0;
         }
-
         #endregion
     }
 }

@@ -74,7 +74,7 @@
 					</td>
 					<td>
 						<form method="post">
-							<input type="hidden" name="name" value="@booking.Name" />
+							<input type="hidden" name="id" value="@booking.BookingId" />
 							<button type="submit" asp-page-handler="Toggle" class="btn btn-primary btn-sm">
 								@(booking.AnkommetHjem ? "Sæt til Ikke Ankommet" : "Marker som Ankommet")
 							</button>

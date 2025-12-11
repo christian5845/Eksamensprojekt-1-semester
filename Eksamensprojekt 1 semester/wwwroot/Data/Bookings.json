@@ -5,7 +5,7 @@
     "DateStart": "2025-12-10",
     "DateEnd": "2025-12-12",
     "Destination": "Oslo",
-    "AnkommetHjem": false,
+    "AnkommetHjem": true,
     "Price": 0,
     "BookedBoat": {
       "Id": 1,
@@ -21,7 +21,7 @@
     "DateStart": "2025-12-14",
     "DateEnd": "2025-12-17",
     "Destination": "Gdansk",
-    "AnkommetHjem": false,
+    "AnkommetHjem": true,
     "Price": 0,
     "BookedBoat": {
       "Id": 2,
@@ -37,7 +37,7 @@
     "DateStart": "2025-12-11",
     "DateEnd": "2025-12-11",
     "Destination": "Kattegat",
-    "AnkommetHjem": false,
+    "AnkommetHjem": true,
     "Price": 0,
     "BookedBoat": {
       "Id": 5,
@@ -46,5 +46,21 @@
       "PricePerDay": 200
     },
     "TotalPris": 200
+  },
+  {
+    "BookingId": 4,
+    "Name": null,
+    "DateStart": "0001-01-01",
+    "DateEnd": "0001-01-01",
+    "Destination": null,
+    "AnkommetHjem": false,
+    "Price": 0,
+    "BookedBoat": {
+      "Id": 1,
+      "Type": "Fiskerb\u00E5d",
+      "Size": "Mellem",
+      "PricePerDay": 800
+    },
+    "TotalPris": 800
   }
 ]

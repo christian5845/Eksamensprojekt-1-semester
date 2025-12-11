@@ -4,6 +4,7 @@ namespace Eksamensprojekt_1_semester.Models;
 
     public class Member
 {
+    #region properties
     [Display(Name = "Medlems ID")]
     //[Required(ErrorMessage = "Der skal angives et ID til medlemmet")]
     //[Range(1, 10000, ErrorMessage = "ID skal være mellem {1} og {2}")]
@@ -28,6 +29,8 @@ namespace Eksamensprojekt_1_semester.Models;
     [Required(ErrorMessage = "Der skal angives en email")]
     [EmailAddress(ErrorMessage = "Ugyldig email")]
     public string? Email { get; set; }
+    #endregion
+    #region constructors
 
     public Member() { }
 
@@ -38,5 +41,6 @@ namespace Eksamensprojekt_1_semester.Models;
         PhoneNumber = phoneNumber;
         Email = email;
     }
-   
+    #endregion
+
 }

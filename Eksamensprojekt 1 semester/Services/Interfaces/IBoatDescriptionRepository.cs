@@ -5,7 +5,8 @@ namespace Eksamensprojekt_1_semester.Services.Interfaces;
 
 public interface IBoatDescriptionRepository
 {
-    
+
+    void AddBoatDescription(string type);
     List<Boat> GetBoats();
 
     List<BoatDescription> GetBoatDescriptions();

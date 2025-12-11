@@ -9,6 +9,12 @@ public class BoatDescription
     {
     }
 
+    public BoatDescription(string type)
+    {
+        Type = type;
+        Description = "Mangler beskrivelse";
+    }
+
     public BoatDescription(string type, string description)
     {
         Type = type;

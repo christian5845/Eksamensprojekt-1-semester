@@ -7,7 +7,7 @@ namespace Eksamensprojekt_1_semester.Services.Interfaces
         void AddABooking(Booking booking);      
         Booking DeleteBooking(string name);
         List<Booking> GetBookedBoats();
-        Booking GetBookedBoats(string name);
+        Booking GetBookedBoats(int id);
 
         List<Boat> GetBoats();
         Boat GetBoat(int id);

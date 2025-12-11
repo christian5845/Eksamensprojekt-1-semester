@@ -1,31 +1,31 @@
 [
   {
     "Id": 1,
-    "Type": "Fiskerb\u00E5d",
+    "Type": "Fiskerbåd",
     "Size": "Mellem",
     "PricePerDay": 800
   },
   {
-    "Id": 3,
+    "Id": 2,
     "Type": "Jolle",
     "Size": "Lille",
     "PricePerDay": 300
   },
   {
-    "Id": 4,
-    "Type": "Sejlb\u00E5d",
+    "Id": 3,
+    "Type": "Sejlbåd",
     "Size": "Mellem",
     "PricePerDay": 800
   },
   {
-    "Id": 5,
-    "Type": "Lyst Jolle",
-    "Size": "lille",
+    "Id": 4,
+    "Type": "Lystjolle",
+    "Size": "Lille",
     "PricePerDay": 200
   },
   {
-    "Id": 6,
-    "Type": "MotorB\u00E5d",
+    "Id": 5,
+    "Type": "Motorbåd",
     "Size": "Mellem",
     "PricePerDay": 200
   }

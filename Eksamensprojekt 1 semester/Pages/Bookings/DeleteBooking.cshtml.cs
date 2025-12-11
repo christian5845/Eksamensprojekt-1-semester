@@ -18,9 +18,9 @@ namespace Eksamensprojekt_1_semester.Pages.Bookings
         [BindProperty]
         public Booking booking { get; set; }
 
-        public IActionResult OnGet(string name)
+        public IActionResult OnGet(int id)
         {
-            booking = _bookABoatRepository.GetBookedBoats(name);
+            booking = _bookABoatRepository.GetBookedBoats(id);
             if (booking == null)
                 return RedirectToPage("/NotFound");
 

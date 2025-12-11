@@ -1,10 +1,10 @@
 ﻿@page
-@model Eksamensprojekt_1_semester.Pages.PHBådemedbeskrivelserModel
+@model Eksamensprojekt_1_semester.Pages.BoatDescriptions.GetAllBoatDescriptionsModel
 @{
     ViewData["title"] = "Vores både";
 }
-<head >
-    <h1 >@ViewData["title"]</h1>
+<head>
+    <h1>@ViewData["title"]</h1>
 </head>
 
 <body>
@@ -14,8 +14,9 @@
     </p>
     @foreach (var båd in Model.Boats)
     {
-       if(!Model.BoatTypes.Contains(båd.Type))
-       {     Model.AddType(båd.Type);
+        if (!Model.BoatTypes.Contains(båd.Type))
+        {
+            Model.AddType(båd.Type);
             <div class="card">
                 <div class="container">
                     <h4><b>@båd.Type</b></h4>
@@ -23,7 +24,12 @@
                     <b>Specifikationer:</b>
                     <p>Størrelse: @båd.Size</p>
                 </div>
-             </div>
-       }
+                <div>
+                    <a class="btn btn-primary btn-sm" type="button" title="Rediger"
+                       asp-page="EditBoatDescriptions" asp-route-id="@båd.Id">Rediger</a>
+                </div>
+            </div>
+            
+        }
     }
 </body>

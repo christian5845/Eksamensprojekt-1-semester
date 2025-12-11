@@ -30,21 +30,5 @@
       "PricePerDay": 300
     },
     "TotalPris": 1200
-  },
-  {
-    "BookingId": 1,
-    "Name": "S\u00F8ren",
-    "DateStart": "2025-12-10",
-    "DateEnd": "2025-12-14",
-    "Destination": "Sverige",
-    "AnkommetHjem": false,
-    "Price": 0,
-    "BookedBoat": {
-      "Id": null,
-      "Type": "Fiskerb\u00E5d",
-      "Size": "Mellem",
-      "PricePerDay": 800
-    },
-    "TotalPris": 4000
   }
 ]

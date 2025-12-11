@@ -39,11 +39,11 @@ public class BookABoatRepository : IBookABoatRepository
         return _booking;
     }
 
-    public Booking GetBookedBoats(string name)
+    public Booking GetBookedBoats(int id)
     {
         foreach (Booking booking in _booking)
         {
-            if (booking.Name == name)
+            if (booking.BookingId == id)
                 return booking;
         }
         return null;

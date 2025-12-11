@@ -22,14 +22,14 @@ public class BookedBoatsModel : PageModel
         Booking = _bookingRepository.GetBookedBoats();
     }
 
-    public IActionResult OnPostToggle(string name)
+    public IActionResult OnPostToggle(string name, int id)
     {
         if (string.IsNullOrWhiteSpace(name))
         {
             return RedirectToPage();
         }
 
-        var booking = _bookingRepository.GetBookedBoats(name);
+        var booking = _bookingRepository.GetBookedBoats(id);
         if (booking != null)
         {
             booking.AnkommetHjem = !booking.AnkommetHjem;

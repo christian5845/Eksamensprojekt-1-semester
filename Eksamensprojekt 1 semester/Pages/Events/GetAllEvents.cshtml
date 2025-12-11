@@ -15,10 +15,7 @@
 
 <table class="table table-bordered table-hover table-striped">
 	<thead>
-		<tr>
-			<th>
-				Id
-			</th>
+		<tr>		
 			<th>
 				Begivenhed
 			</th>
@@ -33,13 +30,10 @@
 	<tbody>
 		@if (Model.Events != null)
 		{
-			// "event" is a C# keyword, so I use. "evt" instead
+			// "event" er et C# keyword, så jeg brugte "evt" istedet
 			foreach (var evt in Model.Events)
 			{
-				<tr>
-					<td>
-						@evt.Id
-					</td>
+				<tr>	
 					<td>
 						@evt.Name
 					</td>
@@ -47,7 +41,7 @@
 						@evt.Type
 					</td>
 					<td>
-						@evt.Price
+						@evt.Price 
 					</td>
 
 					<td>

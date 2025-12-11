@@ -50,8 +50,17 @@ namespace Eksamensprojekt_1_semester.Services.Repositories
 
         public bool IsMemberParticipating(int eventId, int memberId)
         {
-            return _participants.Any(p =>
-               p.EventId == eventId && p.MemberId == memberId);
+            // Gå igennem alle deltagelser
+            foreach (var p in _participants)
+            {
+                // Tjek om både EventId og MemberId matcher
+                if (p.EventId == eventId && p.MemberId == memberId)
+                {
+                    return true; // Stop straks hvis vi finder et match
+                }
+            }
+            // Hvis ingen match fundet
+            return false;
         }
     }
 }

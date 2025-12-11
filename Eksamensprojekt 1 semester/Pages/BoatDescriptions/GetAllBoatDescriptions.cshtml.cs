@@ -7,25 +7,23 @@ namespace Eksamensprojekt_1_semester.Pages.BoatDescriptions;
 
 public class GetAllBoatDescriptionsModel : PageModel
 {
-    private IBoatRepository _boatRepository;
+    private IBoatDescriptionRepository _boatDescriptionRepository;
 
 
     [BindProperty]
-    public List<string> BoatTypes { get; set; }
     public List<Boat> Boats { get; private set; }
 
-    public GetAllBoatDescriptionsModel(IBoatRepository boatRepository)
+    public List<BoatDescription> BoatDescriptions { get; set; }
+
+    public GetAllBoatDescriptionsModel(IBoatDescriptionRepository boatDescriptionRepository)
     {
-        _boatRepository = boatRepository;
-        Boats = _boatRepository.GetBoats();
+        _boatDescriptionRepository = boatDescriptionRepository;
     }
 
     public void OnGet()
     {
-        BoatTypes = new List<string>();
+        Boats = _boatDescriptionRepository.GetBoats();
+        BoatDescriptions = _boatDescriptionRepository.GetBoatDescriptions();
     }
-    public void AddType(string type)
-    {
-        BoatTypes.Add(type);
-    }
+   
 }

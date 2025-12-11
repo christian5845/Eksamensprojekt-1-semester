@@ -4,14 +4,18 @@
 }
 <form method="post">
     <div class="form-group">
-        <label asp-for="BoatDescription.Type" class="control-label">Navn</label>
-        <input asp-for="BoatDescription.Type" class="form-control" />
+        <label asp-for="Boat.Type" class="control-label">Type</label>
+        <input asp-for="Boat.Type" class="form-control" readonly="@true"/>
         
     </div>
     <div class="form-group">
         <label asp-for="BoatDescription.Description" class="control-label">Beskrivelse</label>
         <input asp-for="BoatDescription.Description" class="form-control" />
         <span asp-validation-for="BoatDescription.Description" class="text-danger"></span>
+    </div>
+    <div class="form-group" hidden="@true">
+        <label asp-for="BoatDescription.Type" class="control-label">Beskrivelse</label>
+        <input asp-for="BoatDescription.Type" class="form-control" />
     </div>
     <p>
         <div class="form-group">

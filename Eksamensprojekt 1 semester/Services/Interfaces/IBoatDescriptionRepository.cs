@@ -8,6 +8,7 @@ public interface IBoatDescriptionRepository
 
     void AddBoatDescription(string type);
     List<Boat> GetBoats();
+    Boat GetBoat(int id);
 
     List<BoatDescription> GetBoatDescriptions();
 

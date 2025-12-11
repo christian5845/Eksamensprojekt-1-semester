@@ -14,6 +14,7 @@ public class BoatDescriptionRepository : IBoatDescriptionRepository
     public BoatDescriptionRepository(JsonFileBoatDescriptionService jsonBoatDescriptionService,JsonFileBoatService jsonFileBoatService)
     {
         _jsonBoatDescriptionService = jsonBoatDescriptionService;
+        _jsonBoatService = jsonFileBoatService;
         _boatDescriptions = _jsonBoatDescriptionService.GetJsonBoatDescriptions().ToList();
         _boats = _jsonBoatService.GetJsonBoats().ToList();
     }
@@ -38,6 +39,18 @@ public class BoatDescriptionRepository : IBoatDescriptionRepository
             }
             _jsonBoatDescriptionService.SaveJsonBoatDescriptions(_boatDescriptions);
         }
+    }
+
+    public Boat GetBoat(int id)
+    {
+        foreach(var boat in _boats)
+        {
+            if(boat.Id == id)
+            {
+                return boat;
+            }
+        }
+        return null;
     }
 
     public BoatDescription GetBoatDescription(string boatType)

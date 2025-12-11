@@ -24,6 +24,9 @@ builder.Services.AddSingleton<IIDLogRepository, IDLogRepository>();
 
 builder.Services.AddSingleton<IEventParticipationRepository, EventParticipationRepository>();
 
+builder.Services.AddSingleton<IBoatDescriptionRepository, BoatDescriptionRepository>();
+builder.Services.AddTransient<JsonFileBoatDescriptionService>();
+
 var app = builder.Build();  // <-- ONLY ONE Build call
 
 // Configure the HTTP request pipeline.

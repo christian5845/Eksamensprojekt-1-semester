@@ -1,0 +1,20 @@
+﻿@page
+@model Eksamensprojekt_1_semester.Pages.Events.ParticipateEventsModel
+
+<h2>Tilmeld medlem til @Model.Event.Name</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="EventId" />
+
+    <div class="form-group">
+        <label>Vælg medlem:</label>
+        <select asp-for="MemberId" class="form-control">
+            @foreach (var m in Model.Members)
+            {
+                <option value="@m.Id">@m.Name</option>
+            }
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-success mt-2">Tilmeld</button>
+</form>

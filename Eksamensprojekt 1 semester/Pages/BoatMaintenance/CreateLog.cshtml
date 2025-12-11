@@ -1,0 +1,37 @@
+﻿@page
+@model Eksamensprojekt_1_semester.Pages.BoatMaintenance.CreateLogModel
+@{
+}
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="MaintenanceLog.Type" class="control-label">Type</label>
+        <input asp-for="MaintenanceLog.Type" class="form-control" />
+        <span asp-validation-for="MaintenanceLog.Type" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="MaintenanceLog.RepairCount" class="control-label">Antal reparationer</label>
+        <input asp-for="MaintenanceLog.RepairCount" class="form-control" />
+        <span asp-validation-for="MaintenanceLog.RepairCount" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="MaintenanceLog.Age" class="control-label">Alder</label>
+        <input asp-for="MaintenanceLog.Age" class="form-control" />
+        <span asp-validation-for="MaintenanceLog.Age" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="MaintenanceLog.LastServiced" class="control-label">Senest vedligeholdt/synet</label>
+        <input asp-for="MaintenanceLog.LastServiced" type="date" class="form-control" />
+        <span asp-validation-for="MaintenanceLog.LastServiced" class="text-danger"></span>
+    </div>
+
+    <p>
+        <div class="form-group">
+            <input type="submit" value="Opret" class="btn btn-primary" />
+        </div>
+    </p>
+</form>
+
+<p>
+    <a asp-page="/BoatMaintenance/MaintenanceLog">Tilbage til listen</a>
+</p>

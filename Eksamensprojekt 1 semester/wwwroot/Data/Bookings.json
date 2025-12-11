@@ -30,5 +30,21 @@
       "PricePerDay": 300
     },
     "TotalPris": 1200
+  },
+  {
+    "BookingId": 1,
+    "Name": null,
+    "DateStart": "0001-01-01",
+    "DateEnd": "0001-01-01",
+    "Destination": null,
+    "AnkommetHjem": false,
+    "Price": 0,
+    "BookedBoat": {
+      "Id": null,
+      "Type": "Fiskerb\u00E5d",
+      "Size": "Mellem",
+      "PricePerDay": 800
+    },
+    "TotalPris": 800
   }
 ]

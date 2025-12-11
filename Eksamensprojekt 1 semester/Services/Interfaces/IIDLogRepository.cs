@@ -5,4 +5,5 @@ public interface IIDLogRepository
     int GetNewBoatID();
     int GetNewMemberID();
     int GetNewBookingID();
+    int GetNewLogID();
 }

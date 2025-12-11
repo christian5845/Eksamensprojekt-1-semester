@@ -96,12 +96,6 @@ public class MemberRepository : IMemberRepository
       // SORTER EFTER ID
       _members = _members.OrderBy(m => m.Id).ToList();
 
-      // GENNUMMERÉR ID'er
-      for (int i = 0; i < _members.Count; i++)
-      {
-        _members[i].Id = i + 1;
-      }
-
       // GEM MED NYE ID'er
       _jsonFileMemberService.SaveJsonMembers(_members);
     }

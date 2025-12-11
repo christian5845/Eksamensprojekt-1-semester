@@ -9,6 +9,9 @@ builder.Services.AddRazorPages();
 builder.Services.AddSingleton<IBoatRepository, BoatRepository>(); //Singleton opretter kun en instans af BoatRepository i hele applikationens levetid.
 builder.Services.AddTransient<JsonFileBoatService>(); //Transient opretter en ny instance hver gang den bliver requested.
 
+builder.Services.AddSingleton<IMaintenanceRepository, MaintenanceRepository>();
+builder.Services.AddTransient<JsonFileMaintenanceLogService>();
+
 builder.Services.AddTransient<JsonFileMemberService>();
 builder.Services.AddSingleton<IMemberRepository, MemberRepository>();
 builder.Services.AddSingleton<IBookABoatRepository, BookABoatRepository>();

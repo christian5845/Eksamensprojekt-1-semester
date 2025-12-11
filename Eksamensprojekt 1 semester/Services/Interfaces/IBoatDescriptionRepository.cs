@@ -5,5 +5,10 @@ namespace Eksamensprojekt_1_semester.Services.Interfaces;
 
 public interface IBoatDescriptionRepository
 {
-    Boat GetBoat(int id);
+    
+    List<Boat> GetBoats();
+
+    List<BoatDescription> GetBoatDescriptions();
+
+    void EditBoatDescription(BoatDescription boatDescription);
 }

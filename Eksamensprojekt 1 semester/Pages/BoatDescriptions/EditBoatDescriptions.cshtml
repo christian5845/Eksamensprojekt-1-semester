@@ -2,3 +2,24 @@
 @model Eksamensprojekt_1_semester.Pages.BoatDescriptions.EditBoatDescriptionsModel
 @{
 }
+<form method="post">
+    <div class="form-group">
+        <label asp-for="BoatDescription.Type" class="control-label">Navn</label>
+        <input asp-for="BoatDescription.Type" class="form-control" />
+        
+    </div>
+    <div class="form-group">
+        <label asp-for="BoatDescription.Description" class="control-label">Beskrivelse</label>
+        <input asp-for="BoatDescription.Description" class="form-control" />
+        <span asp-validation-for="BoatDescription.Description" class="text-danger"></span>
+    </div>
+    <p>
+        <div class="form-group">
+            <input type="submit" value="Gem" class="btn btn-primary" />
+        </div>
+    </p>
+</form>
+
+<p>
+    <a asp-page="GetAllBoatDescriptions">Tilbage til vores både</a>
+</p>

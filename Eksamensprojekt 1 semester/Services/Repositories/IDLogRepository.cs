@@ -36,6 +36,7 @@ namespace Eksamensprojekt_1_semester.Services.Repositories
             foreach (IDLog iDLog in _iDLog)
             {
                 iDLog.BookingID++;
+                _jsonFileIDLogService.SaveJsonIDLog(_iDLog);
                 return iDLog.BookingID;
             }
             return 0;

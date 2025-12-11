@@ -32,6 +32,7 @@ public class BookABoatRepository : IBookABoatRepository
         booking.BookingId = _iDLogRepository.GetNewBookingID();
         _booking.Add(booking);
         _jsonFileBookingService.SaveJsonBookings(_booking);
+
     }
 
     public List<Booking> GetBookedBoats()

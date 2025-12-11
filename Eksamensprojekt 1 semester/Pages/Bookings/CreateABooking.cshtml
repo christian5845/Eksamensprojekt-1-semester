@@ -3,6 +3,7 @@
 @{
 }
 <form method="post">
+
     <div class="form-group">
         <label asp-for="TheBooking.Name" class="control-label">Navn</label>
         <input asp-for="TheBooking.Name" class="form-control" />
@@ -37,6 +38,10 @@
         <label asp-for="TheBookedBoat.Size" class="control-label"></label>
         <input asp-for="TheBookedBoat.Size" class="form-control" readonly="@true" />
 
+    </div>
+    <div class="form-group" hidden="@true">
+        <label asp-for="TheBookedBoat.Id" class="control-label"></label>
+        <input asp-for="TheBookedBoat.Id" class="form-control"  />
     </div>
 
     <p>

@@ -8,7 +8,7 @@
     "AnkommetHjem": false,
     "Price": 0,
     "BookedBoat": {
-      "Id": null,
+      "Id": 1,
       "Type": "Fiskerb\u00E5d",
       "Size": "Mellem",
       "PricePerDay": 800
@@ -16,7 +16,7 @@
     "TotalPris": 2400
   },
   {
-    "BookingId": 1,
+    "BookingId": 2,
     "Name": "Rasmus",
     "DateStart": "2025-12-14",
     "DateEnd": "2025-12-17",
@@ -24,7 +24,7 @@
     "AnkommetHjem": false,
     "Price": 0,
     "BookedBoat": {
-      "Id": null,
+      "Id": 2,
       "Type": "Jolle",
       "Size": "Lille",
       "PricePerDay": 300
@@ -32,19 +32,19 @@
     "TotalPris": 1200
   },
   {
-    "BookingId": 1,
-    "Name": null,
-    "DateStart": "0001-01-01",
-    "DateEnd": "0001-01-01",
-    "Destination": null,
+    "BookingId": 3,
+    "Name": "hans",
+    "DateStart": "2025-12-11",
+    "DateEnd": "2025-12-11",
+    "Destination": "Kattegat",
     "AnkommetHjem": false,
     "Price": 0,
     "BookedBoat": {
-      "Id": null,
-      "Type": "Fiskerb\u00E5d",
+      "Id": 5,
+      "Type": "Motorb\u00E5d",
       "Size": "Mellem",
-      "PricePerDay": 800
+      "PricePerDay": 200
     },
-    "TotalPris": 800
+    "TotalPris": 200
   }
 ]

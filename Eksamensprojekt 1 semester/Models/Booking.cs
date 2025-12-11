@@ -2,6 +2,7 @@
 {
     public class Booking
     {
+        #region Properties
         public int BookingId { get; set; }
         public string Name { get; set; }
         public DateOnly DateStart { get; set; }
@@ -18,6 +19,8 @@
                 return antalDage * (BookedBoat?.PricePerDay ?? 0);
             }
         }
+        #endregion
+        #region constructors
         public Booking() { }
 
         public Booking(string name, DateOnly datestart, DateOnly dateend, string destination, Boat bookedboat)
@@ -29,5 +32,6 @@
             Destination = destination;
             AnkommetHjem = false;
         }
+        #endregion
     }
 }

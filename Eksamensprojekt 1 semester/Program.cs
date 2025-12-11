@@ -22,6 +22,8 @@ builder.Services.AddTransient<JsonFileBookingService>();
 builder.Services.AddTransient<JsonFileIDLogService>();
 builder.Services.AddSingleton<IIDLogRepository, IDLogRepository>();
 
+builder.Services.AddSingleton<IEventParticipationRepository, EventParticipationRepository>();
+
 var app = builder.Build();  // <-- ONLY ONE Build call
 
 // Configure the HTTP request pipeline.

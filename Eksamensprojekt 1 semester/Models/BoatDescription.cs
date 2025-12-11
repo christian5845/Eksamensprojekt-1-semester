@@ -2,9 +2,12 @@
 
 public class BoatDescription
 {
+    #region Properties
     public string Type { get; set; }
     public string Description { get; set; }
+    #endregion
 
+    #region Constructors
     public BoatDescription()
     {
     }
@@ -20,4 +23,5 @@ public class BoatDescription
         Type = type;
         Description = description;
     }
+    #endregion
 }

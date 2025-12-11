@@ -45,10 +45,12 @@
 					</td>
 
 					<td>
+						<a class="btn btn-success btn-sm" type="button" title="Deltag"
+						   asp-page="ParticipateEvents" asp-route-id="@evt.Id">Deltag</a>
 						<a class="btn btn-primary btn-sm" type="button" title="Rediger"
 						   asp-page="EditEvents" asp-route-id="@evt.Id">Rediger</a>
 						<a class="btn btn-danger btn-sm" type="button" title="Slet"
-						   asp-page="DeleteEvents" asp-route-id="@evt.Id">Slet</a>
+						   asp-page="DeleteEvents" asp-route-id="@evt.Id">Slet</a>						
 					</td>
 				</tr>
 			}

@@ -5,6 +5,7 @@ namespace Eksamensprojekt_1_semester.Models;
 
 public class Boat 
 {
+    #region Properties
     //[Display(Name = "Båd ID")]
     //[Required(ErrorMessage = "Der skal angives et ID")]
     public int? Id { get; set; }
@@ -17,7 +18,9 @@ public class Boat
     [Display(Name = "Pris per dag")]
     [Required(ErrorMessage = "Der skal angives en pris per dag")]
     public double PricePerDay { get; set; }
+    #endregion
 
+    #region Constructors
     public Boat() { }
 
 public Boat(string type, string size, double pricePerDay)
@@ -26,4 +29,5 @@ public Boat(string type, string size, double pricePerDay)
         Size = size;
         PricePerDay = pricePerDay;
     }
+    #endregion
 }

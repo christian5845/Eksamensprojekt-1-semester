@@ -12,5 +12,12 @@
     "Age": 23,
     "PhoneNumber": "12344244",
     "Email": "barbara@gmail.com"
+  },
+  {
+    "Id": 4,
+    "Name": "S\u00F8ren",
+    "Age": 35,
+    "PhoneNumber": "32432345",
+    "Email": "Soren@gmail.com"
   }
 ]

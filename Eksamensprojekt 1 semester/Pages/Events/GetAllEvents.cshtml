@@ -25,6 +25,10 @@
 			<th>
                 Pris pr. deltager
             </th>
+			<th>
+				Handlinger
+			</th>
+			
 		</tr>
 	</thead>
 	<tbody>
@@ -45,7 +49,7 @@
 					</td>
 
 					<td>
-						<a class="btn btn-success btn-sm" type="button" title="Deltag"
+						<a class="btn btn-sm btn-success" type="button" title="Deltag"
 						   asp-page="ParticipateEvents" asp-route-id="@evt.Id">Deltag</a>
 						<a class="btn btn-primary btn-sm" type="button" title="Rediger"
 						   asp-page="EditEvents" asp-route-id="@evt.Id">Rediger</a>

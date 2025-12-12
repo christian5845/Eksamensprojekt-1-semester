@@ -17,7 +17,7 @@ namespace Eksamensprojekt_1_semester.Pages.Events
 
         public GetAllEventsModel(IEventRepository eventRepository)
         {
-            _eventRepository = eventRepository;
+            _eventRepository = eventRepository;                   
         }
 
         public IActionResult OnPostNameSearch()

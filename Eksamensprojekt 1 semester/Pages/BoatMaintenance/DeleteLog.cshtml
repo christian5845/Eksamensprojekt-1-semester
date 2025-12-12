@@ -1,0 +1,16 @@
+﻿@page
+@model Eksamensprojekt_1_semester.Pages.BoatMaintenance.DeleteLogModel
+@{
+}
+
+<h1>Slet bekræftelse</h1>
+
+<div class="alert alert-danger">
+    <h5>Er du sikker på at du vil slette - @Model.MaintenanceLog.Type</h5>
+    <form method="post">
+        <input type="hidden" asp-for="MaintenanceLog.LogId" />
+        <button type="submit" class="btn btn-danger">Ja</button>
+        <a class="btn btn-primary" asp-page="/BoatMaintenance/MaintenanceLog">Nej</a>
+    </form>
+
+</div>

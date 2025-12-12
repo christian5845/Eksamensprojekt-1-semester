@@ -32,9 +32,9 @@
 <table class="table table-bordered table-hover table-striped">
 	<thead>
 		<tr>
-			<th>
+			@* <th>
 				Id
-			</th>
+			</th> *@
 			<th>
 				Type
 			</th>
@@ -44,6 +44,9 @@
 			<th>
 				Pris per dag
 			</th>
+			<th>
+                Handlinger
+            </th>
 		</tr>
 	</thead>
 	<tbody>
@@ -52,9 +55,9 @@
 			foreach (var boat in Model.Boats)
 			{
 				<tr>
-					<td>
+					@* <td>
 						@boat.Id
-					</td>
+					</td> *@
 					<td>
 						@boat.Type
 					</td>
@@ -62,7 +65,7 @@
 						@boat.Size
 					</td>
 					<td>
-						@boat.PricePerDay
+                        @boat.PricePerDay DKK
 					</td>
 					<td>
 						<a class="btn btn-primary btn-sm" type="button" title="Rediger"

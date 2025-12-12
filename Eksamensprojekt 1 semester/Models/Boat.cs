@@ -23,7 +23,7 @@ public class Boat
     #region Constructors
     public Boat() { }
 
-public Boat(string type, string size, double pricePerDay)
+    public Boat(string type, string size, double pricePerDay)
     {
         Type = type;
         Size = size;

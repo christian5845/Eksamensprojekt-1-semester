@@ -1,44 +1,23 @@
 [
   {
-    "LogId": null,
-    "Type": "Fiskerb\u00E5d",
-    "RepairCount": 4,
-    "LastServiced": "2023-01-15",
-    "Age": 12
-  },
-  {
-    "LogId": null,
+    "LogId": 2,
     "Type": "Jolle",
-    "RepairCount": 1,
-    "LastServiced": "2022-11-20",
-    "Age": 5
-  },
-  {
-    "LogId": null,
-    "Type": "Sejlb\u00E5d",
-    "RepairCount": 2,
-    "LastServiced": "2023-03-10",
+    "RepairCount": 4,
+    "LastServiced": "2025-10-09",
     "Age": 8
   },
   {
-    "LogId": null,
-    "Type": "Lystjolle",
-    "RepairCount": 0,
-    "LastServiced": "2023-05-05",
-    "Age": 2
-  },
-  {
-    "LogId": null,
+    "LogId": 3,
     "Type": "Motorb\u00E5d",
     "RepairCount": 3,
-    "LastServiced": "2022-12-30",
-    "Age": 10
+    "LastServiced": "2025-08-06",
+    "Age": 5
   },
   {
-    "LogId": 1,
-    "Type": "Kano",
-    "RepairCount": 2,
-    "LastServiced": "2025-07-04",
-    "Age": 6
+    "LogId": 4,
+    "Type": "Sejlb\u00E5d",
+    "RepairCount": 8,
+    "LastServiced": "2025-05-07",
+    "Age": 12
   }
 ]

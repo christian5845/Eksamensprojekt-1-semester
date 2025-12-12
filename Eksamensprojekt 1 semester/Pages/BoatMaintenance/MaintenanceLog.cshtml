@@ -7,7 +7,7 @@
 
 <table class="table table-bordered table-hover table-striped">
 	<thead>
-		<tr>
+		<tr class="text-center">
 			<th>
 				Type
 			</th>
@@ -20,9 +20,12 @@
 			<th>
                 Senest vedligeholdt/synet
             </th>
+			<th>
+                Handlinger
+            </th>
 		</tr>
 	</thead>
-	<tbody>
+	<tbody class="text-center">
 		@if (Model.MaintenanceLogs != null)
 		{
 			foreach (var log in Model.MaintenanceLogs)
@@ -40,6 +43,12 @@
 					<td>
 						@log.LastServiced
 					</td>
+					<td>
+						<a class="btn btn-primary btn-sm" type="button" title="Rediger"
+						   asp-page="EditLog" asp-route-id="@log.LogId">Rediger</a>
+                        <a class="btn btn-danger btn-sm" type="button" title="Slet"
+                           asp-page="DeleteLog" asp-route-id="@log.LogId">Slet</a>
+                    </td>
 				</tr>
 			}
 		}

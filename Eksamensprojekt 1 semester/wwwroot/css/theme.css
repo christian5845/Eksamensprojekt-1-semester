@@ -4,5 +4,9 @@
 .navbar {
     background: linear-gradient(90deg, #005b96 0%, #00aaff 100%);
 }
-
+    button:hover, .btn:hover {
+        background-color: #0077b6;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
 

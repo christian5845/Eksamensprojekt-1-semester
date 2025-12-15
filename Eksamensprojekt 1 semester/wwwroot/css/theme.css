@@ -1,5 +1,8 @@
 ﻿  nav a:hover {
             background-color: #a9a6a6;
         }
+.navbar {
+    background: linear-gradient(90deg, #005b96 0%, #00aaff 100%);
+}
 
 

@@ -3,7 +3,19 @@
 @{
     ViewData["Title"] = "Home page";
 }
+<div class="ad-banner">
+    <span>
+        🛥️ Gå ikke glip af vores næste begivenhed! Tilmeld dig allerede nu på
+        <a asp-page="/Events/GetAllEvents">Begivenheder</a> 🛥️
 
+        Læs mere om vores både her:
+        <a asp-page="/Boats/GetAllBoats">Både</a>🛥️
+
+        Se vores medlemsregister her: 
+        <a asp-page="/Members/GetAllMembers">Medlemmer</a>👤
+
+    </span>  
+</div>
 <div class="text-center">
     <h1 class="display-4">Velkommen til Hillerød sejlkub!</h1>
     <p><img src="~/Boat.jpg" alt="båd billede" /></p>
@@ -12,4 +24,5 @@
     <p>Hillerød Sejlklub er en sejlsportsforening beliggende i Hillerød, Danmark. Klubben blev grundlagt i 1935 og har siden da været en central del af det lokale sejlsportmiljø. Klubben tilbyder en bred vifte af aktiviteter og faciliteter for både begyndere og erfarne sejlere.</p>
     <p>Hillerød Sejlklub har en smuk beliggenhed ved Esrum Sø, hvilket giver medlemmerne mulighed for at nyde sejlsport i naturskønne omgivelser. Klubben har en marina med bådpladser, hvor medlemmerne kan opbevare deres både sikkert.</p>
     <p>Klubben arrangerer regelmæssigt sejladser, regattaer og sociale arrangementer for sine medlemmer.
+
 </div>

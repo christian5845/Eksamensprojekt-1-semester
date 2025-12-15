@@ -1,0 +1,36 @@
+﻿@page
+@model Eksamensprojekt_1_semester.Pages.Events.EventParticipantsOverviewModel
+
+<h1>Events og deltagere</h1>
+
+@* Gennemløb alle events *@
+@foreach (var evt in Model.Events)
+{
+    // Hent deltagerne til dette event
+    var participants = Model.GetParticipants(evt.Id);
+
+    <div class="card mb-3">
+        <div class="card-header">
+            <strong>@evt.Name</strong>
+
+            <span class="badge bg-primary ms-2">@participants.Count deltagere</span>
+        </div>
+
+        <div class="card-body">
+            @* Hvis der ingen deltagere er *@
+            @if (participants.Count == 0)
+            {
+                <p>Ingen deltagere tilmeldt endnu.</p>
+            }
+            else
+            {
+                <ul>
+                    @foreach (var member in participants)
+                    {
+                        <li>@member.Name – @member.Email</li>
+                    }
+                </ul>
+            }
+        </div>
+    </div>
+}

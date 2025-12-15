@@ -6,5 +6,9 @@
   {
     "Type": "Jolle",
     "Description": "Dette er en jolle"
+  },
+  {
+    "Type": "Sejlb\u00E5d",
+    "Description": null
   }
 ]

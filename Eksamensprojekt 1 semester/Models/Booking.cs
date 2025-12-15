@@ -20,6 +20,7 @@
             }
         }
         #endregion
+
         #region constructors
         public Booking() { }
 

@@ -1,7 +1,5 @@
-using Eksamensprojekt_1_semester.MockData;
 using Eksamensprojekt_1_semester.Models;
 using Eksamensprojekt_1_semester.Services.Interfaces;
-using Eksamensprojekt_1_semester.Services.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -43,7 +41,7 @@ public class CreateABookingModel : PageModel
 
         foreach (var m in MemberList)
         {
-            if(memberIDInt == m.Id)
+            if (memberIDInt == m.Id)
             {
                 TheBooking.TheBookingMember = m;
             }

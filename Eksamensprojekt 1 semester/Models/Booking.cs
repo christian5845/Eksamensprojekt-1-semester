@@ -4,7 +4,7 @@
     {
         #region Properties
         public int BookingId { get; set; }
-        public string Name { get; set; }
+        public Member? TheBookingMember { get; set; }
         public DateOnly DateStart { get; set; }
         public DateOnly DateEnd { get; set; }
         public string Destination { get; set; }
@@ -23,9 +23,9 @@
         #region constructors
         public Booking() { }
 
-        public Booking(string name, DateOnly datestart, DateOnly dateend, string destination, Boat bookedboat)
+        public Booking(Member member, DateOnly datestart, DateOnly dateend, string destination, Boat bookedboat)
         {
-            Name = name;
+            TheBookingMember = member;
             BookedBoat = bookedboat;
             DateStart = datestart;
             DateEnd = dateend;

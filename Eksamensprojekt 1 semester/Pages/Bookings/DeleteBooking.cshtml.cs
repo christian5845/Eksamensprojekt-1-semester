@@ -29,7 +29,7 @@ namespace Eksamensprojekt_1_semester.Pages.Bookings
 
         public IActionResult OnPost()
         {
-            Booking deletedBooking = _bookABoatRepository.DeleteBooking(booking.Name);
+            Booking deletedBooking = _bookABoatRepository.DeleteBooking(booking.BookingId);
             if (deletedBooking == null)
                 return RedirectToPage("/NotFound");
 

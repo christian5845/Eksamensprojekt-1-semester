@@ -6,10 +6,10 @@
 <h1>Slet Bekræftelse</h1>
 
 <div class="alert alert-danger">
-    <h5>Er du sikker på at du vil slette din booking? - @Model.booking.Name</h5>
+    <h5>Er du sikker på at du vil slette din booking? - @Model.booking.TheBookingMember.Name</h5>
 
     <form method="post">
-        <input type="hidden" asp-for="booking.Name" /> 
+        <input type="hidden" asp-for="booking.BookingId" /> 
 
         <button type="submit" class="btn btn-danger">Ja</button>
 

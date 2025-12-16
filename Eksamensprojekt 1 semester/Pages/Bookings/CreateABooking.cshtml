@@ -2,13 +2,21 @@
 @model Eksamensprojekt_1_semester.Pages.Bookings.CreateABookingModel
 @{
 }
+<h3>@ViewData["confirmation"]</h3>
 <form method="post">
-
+    
     <div class="form-group">
-        <label asp-for="TheBooking.Name" class="control-label">Navn</label>
-        <input asp-for="TheBooking.Name" class="form-control" />
-        <span asp-validation-for="TheBooking.Name" class="text-danger"></span>
+        <label asp-for="Member" class="control-label">Vælg medlem</label>
+       <div>
+            <select asp-for="Member" class="form-control">
+                @foreach (var m in Model.MemberList)
+                {
+                    <option value="@m.Id">@m.Name </option>
+                }
+            </select>
+       </div>
     </div>
+    
     <div class="form-group">
         <label asp-for="TheBooking.Destination" class="control-label">Destination</label>
         <input asp-for="TheBooking.Destination" class="form-control" />

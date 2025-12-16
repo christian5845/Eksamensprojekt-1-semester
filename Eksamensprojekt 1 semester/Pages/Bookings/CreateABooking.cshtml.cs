@@ -10,17 +10,24 @@ namespace Eksamensprojekt_1_semester.Pages.Bookings;
 public class CreateABookingModel : PageModel
 {
     private IBookABoatRepository _iBookABoatRepository;
+    [BindProperty]
+    public List<Member> MemberList { get; set; }
 
     [BindProperty]
     public Booking TheBooking { get; set; }
     [BindProperty]
+    public Member Member { get; set; }
+    [BindProperty]
     public Boat TheBookedBoat { get; set; }
+
+
     public CreateABookingModel(IBookABoatRepository iBookABoatRepository)
-        {
-            _iBookABoatRepository = iBookABoatRepository;
-        }
+    {
+        _iBookABoatRepository = iBookABoatRepository;
+    }
     public IActionResult OnGet(int id)
     {
+        MemberList = _iBookABoatRepository.GetMembers();
         TheBookedBoat = _iBookABoatRepository.GetBoat(id);
         if (TheBookedBoat == null)
             return RedirectToPage("/BookABoat");
@@ -29,14 +36,20 @@ public class CreateABookingModel : PageModel
 
     public IActionResult OnPost()
     {
-        AddBoatToBooking(TheBookedBoat);
+        MemberList = _iBookABoatRepository.GetMembers();
+        string memberIDString = Request.Form["Member"];
+        int memberIDInt = 0;
+        Int32.TryParse(memberIDString, out memberIDInt);
+
+        foreach (var m in MemberList)
+        {
+            if(memberIDInt == m.Id)
+            {
+                TheBooking.TheBookingMember = m;
+            }
+        }
+        TheBooking.BookedBoat = TheBookedBoat;
         _iBookABoatRepository.AddABooking(TheBooking);
         return RedirectToPage("BookedBoats");
-    }
-  
-
-    public void AddBoatToBooking(Boat boat)
-    {
-        TheBooking.BookedBoat = boat;
     }
 }

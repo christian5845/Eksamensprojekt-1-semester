@@ -5,9 +5,10 @@ namespace Eksamensprojekt_1_semester.Services.Interfaces
     public interface IBookABoatRepository
     {
         void AddABooking(Booking booking);      
-        Booking DeleteBooking(string name);
+        Booking DeleteBooking(int bookingID);
         List<Booking> GetBookedBoats();
         Booking GetBookedBoats(int id);
+        List<Member> GetMembers();
 
         List<Boat> GetBoats();
         Boat GetBoat(int id);

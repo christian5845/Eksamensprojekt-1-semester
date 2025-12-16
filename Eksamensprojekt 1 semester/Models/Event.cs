@@ -6,6 +6,7 @@ public class Event
     public int Id { get; set; }
     public string Name { get; set; }
     public string Type { get; set; }
+    public DateTime Date { get; set; }
     public double Price { get; set; }
     public DateOnly DateStart { get; set; }
     public DateOnly DateEnd { get; set; }
@@ -18,6 +19,7 @@ public class Event
         Id = id;
         Name = name;
         Type = type;
+        Date = date;
         Price = price;
         DateStart = dateStart;
         DateEnd = dateEnd;

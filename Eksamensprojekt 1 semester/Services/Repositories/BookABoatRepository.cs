@@ -1,7 +1,8 @@
-﻿using Eksamensprojekt_1_semester.Models;
+﻿using Eksamensprojekt_1_semester.MockData;
+using Eksamensprojekt_1_semester.Models;
 using Eksamensprojekt_1_semester.Services.Interfaces;
-using Eksamensprojekt_1_semester.MockData;
 using Eksamensprojekt_1_semester.Services.Json;
+using System.Xml.Linq;
 
 namespace Eksamensprojekt_1_semester.Services.Repositories;
 
@@ -9,20 +10,24 @@ public class BookABoatRepository : IBookABoatRepository
 {
     #region Instancefields
     private List<Boat> _boats;
+    private List<Member> _memberList;
     private JsonFileBoatService _jsonFileBoatService;
     private List<Booking> _booking;
     private JsonFileBookingService _jsonFileBookingService;
     private IIDLogRepository _iDLogRepository;
+    private JsonFileMemberService _jsonFileMemberService;
     #endregion
 
     #region Constructor
-    public BookABoatRepository(JsonFileBoatService jsonFileBoatService, JsonFileBookingService jsonFileBookingService,IIDLogRepository iIDLogRepository)
+    public BookABoatRepository(JsonFileBoatService jsonFileBoatService, JsonFileBookingService jsonFileBookingService,IIDLogRepository iIDLogRepository, JsonFileMemberService jsonFileMemberService)
     {
         _jsonFileBoatService = jsonFileBoatService;
         _jsonFileBookingService = jsonFileBookingService;
+        _jsonFileMemberService = jsonFileMemberService;
         _iDLogRepository = iIDLogRepository;
-        _boats = jsonFileBoatService.GetJsonBoats().ToList();
+        _boats = _jsonFileBoatService.GetJsonBoats().ToList();
         _booking = _jsonFileBookingService.GetJsonBookings().ToList();
+        _memberList = _jsonFileMemberService.GetJsonMembers().ToList();
     }
     #endregion
 
@@ -50,19 +55,6 @@ public class BookABoatRepository : IBookABoatRepository
         return null;
     }
 
-    public Booking DeleteBooking(string name)
-    {
-        foreach (Booking booking in _booking)
-        {
-            if (booking.Name == name)
-            {
-                _booking.Remove(booking);
-                return booking;
-            }
-        }
-        return null;
-    }
-
     public Boat GetBoat(int id)
     {
         foreach (Boat boat in _boats)
@@ -77,6 +69,24 @@ public class BookABoatRepository : IBookABoatRepository
     public List<Boat> GetBoats()
     {
         return _boats;
+    }
+
+    public Booking DeleteBooking(int bookingID)
+    {
+        foreach (Booking booking in _booking)
+        {
+            if (booking.BookingId == bookingID)
+            {
+                _booking.Remove(booking);
+                return booking;
+            }
+        }
+        return null;
+    }
+
+    public List<Member> GetMembers()
+    {
+        return _memberList;
     }
     #endregion
 }

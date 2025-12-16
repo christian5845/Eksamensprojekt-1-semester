@@ -1,27 +1,17 @@
 [
   {
-    "BookingId": 1,
-    "Name": "Rasmus",
-    "DateStart": "2025-12-10",
-    "DateEnd": "2025-12-12",
-    "Destination": "Oslo",
-    "AnkommetHjem": true,
-    "Price": 0,
-    "BookedBoat": {
-      "Id": 1,
-      "Type": "Fiskerb\u00E5d",
-      "Size": "Mellem",
-      "PricePerDay": 800
+    "BookingId": 14,
+    "TheBookingMember": {
+      "Id": 4,
+      "Name": "S\u00F8ren",
+      "Age": 35,
+      "PhoneNumber": "32432345",
+      "Email": "Soren@gmail.com"
     },
-    "TotalPris": 2400
-  },
-  {
-    "BookingId": 2,
-    "Name": "Rasmus",
-    "DateStart": "2025-12-14",
+    "DateStart": "2025-12-16",
     "DateEnd": "2025-12-17",
-    "Destination": "Gdansk",
-    "AnkommetHjem": true,
+    "Destination": "Voldsmose",
+    "AnkommetHjem": false,
     "Price": 0,
     "BookedBoat": {
       "Id": 2,
@@ -29,30 +19,20 @@
       "Size": "Lille",
       "PricePerDay": 300
     },
-    "TotalPris": 1200
+    "TotalPris": 600
   },
   {
-    "BookingId": 3,
-    "Name": "hans",
-    "DateStart": "2025-12-11",
-    "DateEnd": "2025-12-11",
-    "Destination": "Kattegat",
-    "AnkommetHjem": true,
-    "Price": 0,
-    "BookedBoat": {
-      "Id": 5,
-      "Type": "Motorb\u00E5d",
-      "Size": "Mellem",
-      "PricePerDay": 200
+    "BookingId": 15,
+    "TheBookingMember": {
+      "Id": 1,
+      "Name": "Rasmus Madsen",
+      "Age": 26,
+      "PhoneNumber": "51422661",
+      "Email": "Madsenrasmus48@gmail.com"
     },
-    "TotalPris": 200
-  },
-  {
-    "BookingId": 4,
-    "Name": null,
-    "DateStart": "0001-01-01",
-    "DateEnd": "0001-01-01",
-    "Destination": null,
+    "DateStart": "2025-12-18",
+    "DateEnd": "2025-12-21",
+    "Destination": "Gr\u00F8nland",
     "AnkommetHjem": false,
     "Price": 0,
     "BookedBoat": {
@@ -61,38 +41,6 @@
       "Size": "Mellem",
       "PricePerDay": 800
     },
-    "TotalPris": 800
-  },
-  {
-    "BookingId": 5,
-    "Name": "S\u00F8ren",
-    "DateStart": "2025-12-18",
-    "DateEnd": "2025-12-26",
-    "Destination": "Sverige",
-    "AnkommetHjem": false,
-    "Price": 0,
-    "BookedBoat": {
-      "Id": 1,
-      "Type": "Fiskerb\u00E5d",
-      "Size": "Mellem",
-      "PricePerDay": 800
-    },
-    "TotalPris": 7200
-  },
-  {
-    "BookingId": 6,
-    "Name": "anna",
-    "DateStart": "2025-12-18",
-    "DateEnd": "2025-12-23",
-    "Destination": "kattegat",
-    "AnkommetHjem": false,
-    "Price": 0,
-    "BookedBoat": {
-      "Id": 3,
-      "Type": "Sejlb\u00E5d",
-      "Size": "Mellem",
-      "PricePerDay": 800
-    },
-    "TotalPris": 4800
+    "TotalPris": 3200
   }
 ]

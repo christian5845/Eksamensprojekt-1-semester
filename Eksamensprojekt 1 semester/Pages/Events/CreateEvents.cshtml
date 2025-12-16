@@ -19,6 +19,16 @@
         <span asp-validation-for="Event.Type" class="text-danger"></span>
     </div>
     <div class="form-group">
+        <label asp-for="Event.DateStart" class="control-label">Dato start</label>
+        <input asp-for="Event.DateStart" type="date" class="form-control" />
+        <span asp-validation-for="Event.DateStart" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Event.DateEnd" class="control-label">Dato slut</label>
+        <input asp-for="Event.DateEnd" type="date" class="form-control" />
+        <span asp-validation-for="Event.DateEnd" class="text-danger"></span>
+    </div>
+    <div class="form-group">
         <label for="Event_Price">Pris</label>
         <input asp-for="Event.Price" class="form-control" />
         <span asp-validation-for="Event.Price" class="text-danger"></span>

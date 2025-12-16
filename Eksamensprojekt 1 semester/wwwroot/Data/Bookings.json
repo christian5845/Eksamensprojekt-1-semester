@@ -78,5 +78,21 @@
       "PricePerDay": 800
     },
     "TotalPris": 7200
+  },
+  {
+    "BookingId": 6,
+    "Name": "anna",
+    "DateStart": "2025-12-18",
+    "DateEnd": "2025-12-23",
+    "Destination": "kattegat",
+    "AnkommetHjem": false,
+    "Price": 0,
+    "BookedBoat": {
+      "Id": 3,
+      "Type": "Sejlb\u00E5d",
+      "Size": "Mellem",
+      "PricePerDay": 800
+    },
+    "TotalPris": 4800
   }
 ]

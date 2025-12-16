@@ -8,17 +8,21 @@ public class Event
     public string Type { get; set; }
     public DateTime Date { get; set; }
     public double Price { get; set; }
+    public DateOnly DateStart { get; set; }
+    public DateOnly DateEnd { get; set; }
     #endregion
 
     #region constructors
     public Event() { }
-    public Event(int id, string name, string type, DateTime date, double price)
+    public Event(int id, string name, string type, double price, DateOnly dateStart, DateOnly dateEnd)
     {
         Id = id;
         Name = name;
         Type = type;
         Date = date;
         Price = price;
+        DateStart = dateStart;
+        DateEnd = dateEnd;
     }
     #endregion
 }

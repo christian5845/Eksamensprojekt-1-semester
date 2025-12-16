@@ -24,7 +24,7 @@
     .ad-banner span {
         display: inline-block;
         white-space: nowrap;
-        animation: scroll-left 25s linear infinite;
+        animation: scroll-left 20s linear infinite;
     }
 
 @keyframes scroll-left {

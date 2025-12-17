@@ -16,5 +16,11 @@
     "Type": "Sejlb\u00E5d",
     "Size": "Mellem",
     "PricePerDay": 800
+  },
+  {
+    "Id": 9,
+    "Type": "Motorb\u00E5d",
+    "Size": "Stor",
+    "PricePerDay": 1500
   }
 ]

@@ -9,6 +9,7 @@ namespace Eksamensprojekt_1_semester.Pages.Boats
     {
         private IBoatRepository _boatRepository;
 
+        // Property til at binde båden, der skal redigeres.
         [BindProperty]
         public Boat Boat { get; set; }
 
@@ -17,6 +18,7 @@ namespace Eksamensprojekt_1_semester.Pages.Boats
             _boatRepository = boatRepository;
         }
 
+        // Hent båden baseret på dens ID ved GET-anmodning.
         public IActionResult OnGet(int id)
         {
             Boat = _boatRepository.GetBoat(id);
@@ -26,6 +28,7 @@ namespace Eksamensprojekt_1_semester.Pages.Boats
             return Page();
         }
 
+        // Opdater båden ved POST-anmodning.
         public IActionResult OnPost()
         {
             if (!ModelState.IsValid)

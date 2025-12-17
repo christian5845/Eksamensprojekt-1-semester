@@ -13,11 +13,13 @@ public class JsonFileBoatService
         WebHostEnvironment = webHostEnvironment;
     }
 
+    // Sti til JSON-filen, der indeholder båddata.
     private string JsonFileName
     {
         get { return Path.Combine(WebHostEnvironment.WebRootPath, "Data", "Boats.json"); }
     }
 
+    // Gemmer en liste af både til JSON-filen.
     public void SaveJsonBoats(List<Boat> boats)
     {
         using (FileStream jsonFileWriter = File.Create(JsonFileName))
@@ -31,6 +33,7 @@ public class JsonFileBoatService
         }
     }
 
+    // Henter en liste af både fra JSON-filen.
     public IEnumerable<Boat> GetJsonBoats()
     {
         using (StreamReader jsonFileReader = File.OpenText(JsonFileName))

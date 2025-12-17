@@ -15,9 +15,11 @@ namespace Eksamensprojekt_1_semester.Pages.Boats
             _boatRepository = boatRepository;
         }
 
+        // Property til at binde båden, der skal slettes.
         [BindProperty]
         public Boat Boat { get; set; }
 
+        // Hent båden baseret på dens ID ved GET-anmodning.
         public IActionResult OnGet(int id)
         {
             Boat = _boatRepository.GetBoat(id);
@@ -27,6 +29,7 @@ namespace Eksamensprojekt_1_semester.Pages.Boats
             return Page();
         }
 
+        // Slet båden ved POST-anmodning.
         public IActionResult OnPost(int id)
         {
             Boat deletedBoat = _boatRepository.DeleteBoat(Boat.Id);

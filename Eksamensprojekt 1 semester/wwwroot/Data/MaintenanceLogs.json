@@ -1,14 +1,14 @@
 [
   {
     "LogId": 2,
-    "Type": "Jolle",
+    "Type": "Fiskerb\u00E5d",
     "RepairCount": 4,
     "LastServiced": "2025-10-09",
     "Age": 8
   },
   {
     "LogId": 3,
-    "Type": "Motorb\u00E5d",
+    "Type": "Jolle",
     "RepairCount": 3,
     "LastServiced": "2025-08-06",
     "Age": 5
@@ -19,5 +19,12 @@
     "RepairCount": 8,
     "LastServiced": "2025-05-07",
     "Age": 12
+  },
+  {
+    "LogId": 8,
+    "Type": "Motorb\u00E5d",
+    "RepairCount": 2,
+    "LastServiced": "2024-08-10",
+    "Age": 5
   }
 ]

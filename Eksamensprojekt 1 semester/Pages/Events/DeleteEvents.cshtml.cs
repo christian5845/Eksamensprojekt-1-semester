@@ -33,8 +33,5 @@ namespace Eksamensprojekt_1_semester.Pages.Events
 
             return RedirectToPage("GetAllEvents"); // Slettet succesfuldt
         }
-
-
-
     }
 }

@@ -1,14 +1,26 @@
 [
   {
-    "Type": "Fiskerb\u00E5d",
-    "Description": null
+    "Type": "Fiskerbåd",
+    "Description": "En fiskerbåd er bygget til at gøre fiskeri nemt og effektivt. Den er stabil i vandet, selv ved bevægelse ombord, og har plads til fiskegrej, fangst og udstyr. Velegnet til både kystnært fiskeri og længere ture."
   },
   {
     "Type": "Jolle",
-    "Description": "Dette er en jolle"
+    "Description": "En jolle bruges typisk til korte ture tæt på land. Den er let at styre, nem at transportere og ideel til begyndere, børn eller som hjælpepåd til større både."
   },
   {
-    "Type": "Sejlb\u00E5d",
-    "Description": null
+    "Type": "Sejlbåd",
+    "Description": "En sejlbåd drives af vindens kraft og bruges til afslappende sejlads og længere ophold på vandet. Den er velegnet til både dagsture og ferier og giver mulighed for at sejle længere stræk uden motor."
+  },
+  {
+    "Type": "Motorbåd",
+    "Description": "En motorbåd bruges til hurtig transport på vandet. Den er ideel til vandsport, fisketure, udflugter og kørsel mellem havne, hvor fart og fleksibilitet er vigtige."
+  },
+  {
+    "Type": "RIB-båd",
+    "Description": "En RIB-båd kombinerer høj hastighed med stor stabilitet. Den bruges ofte til redning, transport og actionfyldte ture, da den kan sejle sikkert i mere udfordrende forhold."
+  },
+  {
+    "Type": "Kajak",
+    "Description": "En kajak bruges til stille sejlads, motion og naturoplevelser. Den er let at manøvrere og perfekt til søer, åer og kystnære områder, hvor man ønsker en tæt kontakt med vandet."
   }
 ]

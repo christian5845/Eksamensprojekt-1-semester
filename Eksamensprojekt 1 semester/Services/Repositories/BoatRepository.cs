@@ -4,14 +4,17 @@ using Eksamensprojekt_1_semester.Services.Json;
 
 namespace Eksamensprojekt_1_semester.Services.Repositories;
 
+// Implementering af IBoatRepository interfacet.
 public class BoatRepository : IBoatRepository
 {
+    // Liste til at gemme bådene midlertidigt.
     private List<Boat> _boats;
 
+    // Dependency Injection af JsonFileBoatService og IIDLogRepository.
     private JsonFileBoatService JsonFileBoatService;
     private IIDLogRepository _iIDLogRepository;
 
-
+    // Constructor til at initialisere repository'et med data fra JSON-filen.
     public BoatRepository(JsonFileBoatService jsonFileBoatService,IIDLogRepository iIDLogRepository)
     {
         JsonFileBoatService = jsonFileBoatService;
@@ -20,11 +23,13 @@ public class BoatRepository : IBoatRepository
 
     }
 
+    // Metode til at hente alle både.
     public List<Boat> GetBoats()
     {
         return _boats;
     }
 
+    // Metode til at tilføje en ny båd.
     public void AddBoat(Boat boat)
     {
         boat.Id = _iIDLogRepository.GetNewBoatID();
@@ -32,6 +37,7 @@ public class BoatRepository : IBoatRepository
         JsonFileBoatService.SaveJsonBoats(_boats);
     }
 
+    // Metode til at hente en båd baseret på dens ID.
     public Boat GetBoat(int id)
     {
         foreach (Boat boat in _boats)
@@ -43,6 +49,7 @@ public class BoatRepository : IBoatRepository
         return null;
     }
 
+    // Metode til at opdatere en eksisterende båd.
     public void UpdateBoat(Boat boat)
     {
         if (boat != null)
@@ -60,6 +67,7 @@ public class BoatRepository : IBoatRepository
         }
     }
 
+    // Metode til at slette en båd baseret på dens ID.
     public Boat DeleteBoat (int? boatId)
     {
         Boat boatToBeDeleted = null;
@@ -81,6 +89,7 @@ public class BoatRepository : IBoatRepository
         return boatToBeDeleted;
     }
 
+    // Metode til at søge både baseret på deres type.
     public IEnumerable<Boat> GetBoatByType(string type)
     {
         List<Boat> typeSearch = new List<Boat>();
@@ -94,6 +103,7 @@ public class BoatRepository : IBoatRepository
         return typeSearch;
     }
 
+    // Metode til at filtrere både baseret på prisinterval.
     public IEnumerable<Boat> PriceFilter(double maxPrice, double minPrice = 0)
     {
         List<Boat> filterList = new List<Boat>();

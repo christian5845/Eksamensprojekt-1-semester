@@ -21,6 +21,7 @@ public class Boat
     #endregion
 
     #region Constructors
+    // Default constructor som creater et tomt Boat objekt (default værdier). Benyttes til Razor Pages og Json-filerne.
     public Boat() { }
 
     public Boat(string type, string size, double pricePerDay)

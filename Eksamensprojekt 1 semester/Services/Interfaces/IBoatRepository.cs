@@ -2,6 +2,9 @@
 
 namespace Eksamensprojekt_1_semester.Services.Interfaces;
 
+// Interfaces beskriver hvilke metoder en repository skal implementere.
+// Altså hvilke funktionaliteter der skal være tilgængelige for at arbejde med Boat-objekter, men ikke hvordan de virker.
+// Det dertilhørende repository SKAL implementere disse metoder.
 public interface IBoatRepository
 {
     List<Boat> GetBoats();

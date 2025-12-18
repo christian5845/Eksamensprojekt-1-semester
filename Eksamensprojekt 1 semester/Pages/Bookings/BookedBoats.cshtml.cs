@@ -24,7 +24,7 @@ public class BookedBoatsModel : PageModel
 
     public IActionResult OnPostToggle(int id)
     {
-        if (id < 0)
+        if (id <= 0)
         {
             return RedirectToPage();
         }

@@ -5,7 +5,7 @@ using Eksamensprojekt_1_semester.Models;
 
 
 namespace Eksamensprojekt_1_semester.Pages.Bookings;
-
+//Rasmus
 public class DeleteBookingsModel : PageModel
 {
     #region Instancefields

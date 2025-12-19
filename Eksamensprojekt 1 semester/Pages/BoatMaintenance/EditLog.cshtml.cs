@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Eksamensprojekt_1_semester.Pages.BoatMaintenance;
-
+//Jonas
 public class EditLogModel : PageModel
 {
     #region Instancefields

@@ -5,7 +5,7 @@ using Eksamensprojekt_1_semester.Models;
 using Eksamensprojekt_1_semester.Services.Interfaces;
 
 namespace Eksamensprojekt_1_semester.Pages.Boats;
-
+//Jonas
 public class GetAllBoatsModel : PageModel
 {
     #region Instancefields

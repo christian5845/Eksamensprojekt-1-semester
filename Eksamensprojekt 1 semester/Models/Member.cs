@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
 namespace Eksamensprojekt_1_semester.Models;
-
-    public class Member
+//Troels
+public class Member
 {
     #region properties
     public int? Id { get; set; }

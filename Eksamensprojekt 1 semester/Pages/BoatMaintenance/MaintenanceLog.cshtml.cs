@@ -5,7 +5,7 @@ using Eksamensprojekt_1_semester.Services.Interfaces;
 
 
 namespace Eksamensprojekt_1_semester.Pages.BoatMaintenance;
-
+//Jonas
 public class MaintenanceLogModel : PageModel
 {
     #region Instancefields

@@ -4,19 +4,19 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Eksamensprojekt_1_semester.Pages.Bookings;
-
+//Søren, Christian, Rasmus
 public class BookABoatModel : PageModel 
 {
-    #region
+    #region InstanceFields
     private IBookABoatRepository _ibookABoatRepository;
     #endregion
 
-    #region
+    #region Properties
     [BindProperty]
     public List<Boat> BookABoat { get; set; }
     #endregion
 
-    #region
+    #region COnstructors
     public BookABoatModel(IBookABoatRepository ibookABoatRepository)
     {
         _ibookABoatRepository = ibookABoatRepository;

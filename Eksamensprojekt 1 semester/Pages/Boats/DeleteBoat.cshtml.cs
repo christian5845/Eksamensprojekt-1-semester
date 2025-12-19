@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 #nullable disable
 
 namespace Eksamensprojekt_1_semester.Pages.Boats;
-
+//Jonas
 public class DeleteBoatModel : PageModel
 {
     #region Instancefields

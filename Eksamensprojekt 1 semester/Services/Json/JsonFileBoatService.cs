@@ -2,16 +2,20 @@
 using System.Text.Json;
 
 namespace Eksamensprojekt_1_semester.Services.Json;
-
+//Jonas
 public class JsonFileBoatService
 {
+   
     public IWebHostEnvironment WebHostEnvironment { get; }
+   
 
+   
     //Dependency Injection
     public JsonFileBoatService(IWebHostEnvironment webHostEnvironment)
     {
         WebHostEnvironment = webHostEnvironment;
     }
+   
 
     // Sti til JSON-filen, der indeholder båddata.
     private string JsonFileName

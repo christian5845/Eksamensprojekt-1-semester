@@ -2,12 +2,10 @@
 using System.Text;
 
 namespace Eksamensprojekt_1_semester.Models;
-
+//Jonas
 public class Boat 
 {
     #region Properties
-    //[Display(Name = "Båd ID")]
-    //[Required(ErrorMessage = "Der skal angives et ID")]
     public int? Id { get; set; }
     [Display(Name = "Båd Type")]
     [Required(ErrorMessage = "Der skal angives en bådtype")]

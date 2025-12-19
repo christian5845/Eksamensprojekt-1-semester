@@ -3,14 +3,17 @@ using Eksamensprojekt_1_semester.Services.Interfaces;
 using Eksamensprojekt_1_semester.Services.Json;
 
 namespace Eksamensprojekt_1_semester.Services.Repositories;
-
+//Rasmus
 public class BoatDescriptionRepository : IBoatDescriptionRepository
 {
+    #region Instancefields
     private List<BoatDescription> _boatDescriptions;
     private List<Boat> _boats;
     private JsonFileBoatDescriptionService _jsonBoatDescriptionService;
     private JsonFileBoatService _jsonBoatService;
+    #endregion
 
+    #region Constructors
     public BoatDescriptionRepository(JsonFileBoatDescriptionService jsonBoatDescriptionService,JsonFileBoatService jsonFileBoatService)
     {
         _jsonBoatDescriptionService = jsonBoatDescriptionService;
@@ -18,7 +21,9 @@ public class BoatDescriptionRepository : IBoatDescriptionRepository
         _boatDescriptions = _jsonBoatDescriptionService.GetJsonBoatDescriptions().ToList();
         _boats = _jsonBoatService.GetJsonBoats().ToList();
     }
+    #endregion
 
+    #region Methods
     public void AddBoatDescription(string type)
     {
         BoatDescription boatDescription = new BoatDescription(type);
@@ -72,4 +77,5 @@ public class BoatDescriptionRepository : IBoatDescriptionRepository
     {
         return _boats;    
     }
+    #endregion
 }

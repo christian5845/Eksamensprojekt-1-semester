@@ -3,26 +3,29 @@ using Eksamensprojekt_1_semester.Services.Interfaces;
 using Eksamensprojekt_1_semester.Services.Json;
 
 namespace Eksamensprojekt_1_semester.Services.Repositories;
-
+//Jonas
 // Implementering af IBoatRepository interfacet.
 public class BoatRepository : IBoatRepository
 {
+    #region Instancefields
     // Liste til at gemme bådene midlertidigt.
     private List<Boat> _boats;
-
     // Dependency Injection af JsonFileBoatService og IIDLogRepository.
     private JsonFileBoatService JsonFileBoatService;
     private IIDLogRepository _iIDLogRepository;
+    #endregion
 
+    #region Constructors
     // Constructor til at initialisere repository'et med data fra JSON-filen.
     public BoatRepository(JsonFileBoatService jsonFileBoatService,IIDLogRepository iIDLogRepository)
     {
         JsonFileBoatService = jsonFileBoatService;
         _iIDLogRepository = iIDLogRepository;
         _boats = JsonFileBoatService.GetJsonBoats().ToList();
-
     }
+    #endregion
 
+    #region Methods
     // Metode til at hente alle både.
     public List<Boat> GetBoats()
     {
@@ -119,4 +122,5 @@ public class BoatRepository : IBoatRepository
 
         return filterList;
     }
+    #endregion
 }

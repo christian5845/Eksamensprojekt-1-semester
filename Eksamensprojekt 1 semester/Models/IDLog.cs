@@ -1,7 +1,7 @@
 ﻿using Eksamensprojekt_1_semester.Services.Json;
 
 namespace Eksamensprojekt_1_semester.Models;
-
+//Rasmus
 public class IDLog
 {
     #region properties

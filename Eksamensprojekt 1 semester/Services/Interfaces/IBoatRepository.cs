@@ -1,7 +1,7 @@
 ﻿using Eksamensprojekt_1_semester.Models;
 
 namespace Eksamensprojekt_1_semester.Services.Interfaces;
-
+//Jonas
 // Interfaces beskriver hvilke metoder en repository skal implementere.
 // Altså hvilke funktionaliteter der skal være tilgængelige for at arbejde med Boat-objekter, men ikke hvordan de virker.
 // Det dertilhørende repository SKAL implementere disse metoder.

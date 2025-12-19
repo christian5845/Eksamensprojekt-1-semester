@@ -2,7 +2,7 @@
 using System.Text.Json;
 
 namespace Eksamensprojekt_1_semester.Services.Json;
-
+//Jonas
 public class JsonFileMaintenanceLogService
 {
     public IWebHostEnvironment WebHostEnvironment { get; }

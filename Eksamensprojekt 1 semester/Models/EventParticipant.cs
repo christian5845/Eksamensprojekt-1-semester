@@ -1,5 +1,5 @@
 ﻿namespace Eksamensprojekt_1_semester.Models;
-
+//Søren
 public class EventParticipant
 {
     #region properties

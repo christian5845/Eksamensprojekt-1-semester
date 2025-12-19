@@ -5,7 +5,7 @@ using Eksamensprojekt_1_semester.Models;
 using Eksamensprojekt_1_semester.Services.Interfaces;
 
 namespace Eksamensprojekt_1_semester.Pages.Events;
-
+//Søren
 public class GetAllEventsModel : PageModel
 {
     #region Instancefields

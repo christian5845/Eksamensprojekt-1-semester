@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
 namespace Eksamensprojekt_1_semester.Models;
-
+//Jonas
 public class MaintenanceLog
 {
     #region Properties

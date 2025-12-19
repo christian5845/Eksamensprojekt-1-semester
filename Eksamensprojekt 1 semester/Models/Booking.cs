@@ -1,5 +1,5 @@
 ﻿namespace Eksamensprojekt_1_semester.Models;
-
+//Rasmus, Christian, Søren
 public class Booking
 {
     #region Properties

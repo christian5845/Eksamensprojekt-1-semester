@@ -3,7 +3,7 @@ using Eksamensprojekt_1_semester.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Eksamensprojekt_1_semester.Pages.Events;
-
+//Troels
 public class EventParticipantsOverviewModel : PageModel
 {
     #region Instancefields

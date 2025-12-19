@@ -1,5 +1,5 @@
 ﻿namespace Eksamensprojekt_1_semester.Models;
-
+//Rasmus
 public class BoatDescription
 {
     #region Properties

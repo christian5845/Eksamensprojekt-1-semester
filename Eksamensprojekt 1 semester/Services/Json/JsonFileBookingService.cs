@@ -2,7 +2,7 @@
 using System.Text.Json;
 
 namespace Eksamensprojekt_1_semester.Services.Json;
-
+//Rasmus
 public class JsonFileBookingService
 {
     public IWebHostEnvironment WebHostEnvironment { get; }

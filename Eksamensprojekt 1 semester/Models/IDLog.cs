@@ -10,6 +10,7 @@ public class IDLog
     public int BookingID { get; set; }
     public int LogID { get; set; }
     #endregion
+
     #region constructors
     public IDLog() { }
     #endregion

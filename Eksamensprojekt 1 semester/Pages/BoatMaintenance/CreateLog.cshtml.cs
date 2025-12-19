@@ -3,34 +3,40 @@ using Eksamensprojekt_1_semester.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Eksamensprojekt_1_semester.Pages.BoatMaintenance
+namespace Eksamensprojekt_1_semester.Pages.BoatMaintenance;
+
+public class CreateLogModel : PageModel
 {
-    public class CreateLogModel : PageModel
+    #region Instancefields
+    private IMaintenanceRepository _maintenanceRepository;
+    #endregion
+
+    #region Properties
+    [BindProperty]
+    public MaintenanceLog MaintenanceLog { get; set; }
+    #endregion
+
+    #region Constuctors
+    public CreateLogModel (IMaintenanceRepository maintenanceRepository)
     {
-        private IMaintenanceRepository _maintenanceRepository;
+        _maintenanceRepository = maintenanceRepository;
+    }
+    #endregion
 
-        [BindProperty]
-        public MaintenanceLog MaintenanceLog { get; set; }
+    #region Methods
+    public IActionResult OnGet()
+    {
+        return Page();
+    }
 
-        public CreateLogModel (IMaintenanceRepository maintenanceRepository)
-        {
-            _maintenanceRepository = maintenanceRepository;
-        }
-
-        public IActionResult OnGet()
+    public IActionResult OnPost()
+    {
+        if (!ModelState.IsValid)
         {
             return Page();
         }
-
-        public IActionResult OnPost()
-        {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
-            _maintenanceRepository.AddMaintenanceLog(MaintenanceLog);
-            return RedirectToPage("MaintenanceLog");
-        }
-
+        _maintenanceRepository.AddMaintenanceLog(MaintenanceLog);
+        return RedirectToPage("MaintenanceLog");
     }
+    #endregion
 }

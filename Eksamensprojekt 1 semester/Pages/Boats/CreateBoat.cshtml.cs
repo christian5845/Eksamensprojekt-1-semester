@@ -3,36 +3,44 @@ using Eksamensprojekt_1_semester.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Eksamensprojekt_1_semester.Pages.Boats
+namespace Eksamensprojekt_1_semester.Pages.Boats;
+
+public class CreateBoatModel : PageModel
 {
-    public class CreateBoatModel : PageModel
+    #region Instancefields
+    private IBoatRepository _boatRepository;
+    #endregion
+
+    #region Properties
+    // Property til at binde den nye båd.
+    [BindProperty]
+    public Boat Boat { get; set; }
+    #endregion
+
+    #region Constructors
+    public CreateBoatModel(IBoatRepository boatRepository)
     {
-        private IBoatRepository _boatRepository;
+        _boatRepository = boatRepository;
+    }
 
-        // Property til at binde den nye båd.
-        [BindProperty]
-        public Boat Boat { get; set; }
-        
-        public CreateBoatModel(IBoatRepository boatRepository)
-        {
-            _boatRepository = boatRepository;
-        }
+    #endregion
 
-        // Vis siden ved GET-anmodning.
-        public IActionResult OnGet()
+    #region Methods
+    // Vis siden ved GET-anmodning.
+    public IActionResult OnGet()
+    {
+        return Page();
+    }
+
+    // Opret den nye båd ved POST-anmodning.
+    public IActionResult OnPost()
+    {
+        if (!ModelState.IsValid)
         {
             return Page();
         }
-
-        // Opret den nye båd ved POST-anmodning.
-        public IActionResult OnPost()
-        {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
-            _boatRepository.AddBoat(Boat);
-            return RedirectToPage("GetAllBoats");
-        }
+        _boatRepository.AddBoat(Boat);
+        return RedirectToPage("GetAllBoats");
     }
+    #endregion
 }

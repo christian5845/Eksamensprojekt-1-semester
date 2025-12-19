@@ -4,37 +4,45 @@ using Eksamensprojekt_1_semester.Services.Interfaces;
 using Eksamensprojekt_1_semester.Models;
 
 
-namespace Eksamensprojekt_1_semester.Pages.Bookings
+namespace Eksamensprojekt_1_semester.Pages.Bookings;
+
+public class DeleteBookingsModel : PageModel
 {
-    public class DeleteBookingsModel : PageModel
+    #region Instancefields
+    private IBookABoatRepository _bookABoatRepository;
+    #endregion
+
+    #region Constructors
+    [BindProperty]
+    public Booking booking { get; set; }
+    #endregion
+
+    #region Constructors
+    public DeleteBookingsModel(IBookABoatRepository bookABoatRepository)
     {
-        private IBookABoatRepository _bookABoatRepository;
+        _bookABoatRepository = bookABoatRepository;
+    }
+    #endregion
 
-        public DeleteBookingsModel(IBookABoatRepository bookABoatRepository)
+    #region Methods
+    public IActionResult OnGet(int id)
+    {
+        booking = _bookABoatRepository.GetBookedBoats(id);
+        if (booking == null)
         {
-            _bookABoatRepository = bookABoatRepository;
-        }
-
-        [BindProperty]
-        public Booking booking { get; set; }
-
-        public IActionResult OnGet(int id)
-        {
-            booking = _bookABoatRepository.GetBookedBoats(id);
-            if (booking == null)
-                return RedirectToPage("/NotFound");
-
-            return Page();
-        }
-
-        public IActionResult OnPost()
-        {
-            Booking deletedBooking = _bookABoatRepository.DeleteBooking(booking.BookingId);
-            if (deletedBooking == null)
-                return RedirectToPage("/NotFound");
-
             return RedirectToPage("BookedBoats");
         }
+        return Page();
     }
+
+    public IActionResult OnPost()
+    {
+        Booking deletedBooking = _bookABoatRepository.DeleteBooking(booking.BookingId);
+        if (deletedBooking == null)
+            return RedirectToPage("BookedBoats");
+
+        return RedirectToPage("BookedBoats");
+    }
+    #endregion
 }
 

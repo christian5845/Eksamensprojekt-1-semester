@@ -3,31 +3,41 @@ using Eksamensprojekt_1_semester.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Eksamensprojekt_1_semester.Pages.Events
+namespace Eksamensprojekt_1_semester.Pages.Events;
+
+public class CreateEventsModel : PageModel
 {
-    public class CreateEventsModel : PageModel
+    #region Instancefields
+    private IEventRepository _eventRepository;
+    #endregion 
+
+    #region Properties
+    [BindProperty]
+    public Event Event { get; set; }
+    #endregion
+
+    #region Constructors
+    public CreateEventsModel(IEventRepository eventRepository)
     {
-        private IEventRepository _eventRepository;
-        [BindProperty]
-        public Event Event { get; set; }
-        public CreateEventsModel(IEventRepository eventRepository)
-        {
-            _eventRepository = eventRepository;
-        }
-        public IActionResult OnGet()
+        _eventRepository = eventRepository;
+    }
+    #endregion
+
+    #region Methods
+    public IActionResult OnGet()
+    {
+        return Page();
+    }
+    public IActionResult OnPost()
+    {
+        if (!ModelState.IsValid)
         {
             return Page();
         }
-        public IActionResult OnPost()
-        {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
-            _eventRepository.AddEvent(Event);
-            return RedirectToPage("GetAllEvents");
-        }
+        _eventRepository.AddEvent(Event);
+        return RedirectToPage("GetAllEvents");
     }
+    #endregion
 }
 
 

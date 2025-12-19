@@ -8,7 +8,6 @@ public class MemberRepository : IMemberRepository
 {
     #region Instancefields
     private List<Member> _members;
-
     private JsonFileMemberService _jsonFileMemberService;
     private IIDLogRepository _iDLogRepository;
     #endregion
@@ -31,15 +30,12 @@ public class MemberRepository : IMemberRepository
     return _members.OrderBy(m => m.Id).ToList();
   }
 
-
   public void AddMember(Member member)
   {
     member.Id = _members.Count == 0 ? 1 : _members.Max(m => m.Id.Value) + 1;
     _members.Add(member);
     _jsonFileMemberService.SaveJsonMembers(_members);
   }
-
-
 
   public IEnumerable<Member> NameSearch(string str)
     {

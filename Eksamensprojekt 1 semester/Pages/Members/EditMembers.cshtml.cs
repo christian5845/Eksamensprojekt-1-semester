@@ -7,21 +7,30 @@ namespace Eksamensprojekt_1_semester.Pages.Members;
 
 public class EditMembersModel : PageModel
 {
+    #region Instancefields
     private IMemberRepository _memberRepository;
+    #endregion
 
+    #region properties
     [BindProperty]
     public Member Member { get; set; }
+    #endregion
+
+    #region Constructors
     public EditMembersModel(IMemberRepository memberRepository)
     {
         _memberRepository = memberRepository;
     }
+    #endregion
 
+    #region Methods
     public IActionResult OnGet(int id)
     {
         Member = _memberRepository.GetMember(id);
         if (Member == null)
-            return RedirectToPage("/NotFound");
-
+        {
+            return RedirectToPage("GetAllMembers");
+        }
         return Page();
     }
 
@@ -35,6 +44,5 @@ public class EditMembersModel : PageModel
         _memberRepository.UpdateMember(Member);
         return RedirectToPage("GetAllMembers");
     }
-
-
+    #endregion
 }

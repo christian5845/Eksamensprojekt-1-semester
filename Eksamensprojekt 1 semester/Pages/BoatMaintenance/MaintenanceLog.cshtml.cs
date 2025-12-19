@@ -4,22 +4,29 @@ using Eksamensprojekt_1_semester.Models;
 using Eksamensprojekt_1_semester.Services.Interfaces;
 
 
-namespace Eksamensprojekt_1_semester.Pages.BoatMaintenance
+namespace Eksamensprojekt_1_semester.Pages.BoatMaintenance;
+
+public class MaintenanceLogModel : PageModel
 {
-    public class MaintenanceLogModel : PageModel
+    #region Instancefields
+    private IMaintenanceRepository _maintenanceRepository;
+    #endregion
+
+    #region Properties
+    public List<MaintenanceLog> MaintenanceLogs { get; private set; }
+    #endregion
+
+    #region Constructors
+    public MaintenanceLogModel(IMaintenanceRepository maintenanceRepository)
     {
-        private IMaintenanceRepository _maintenanceRepository;
-
-        public MaintenanceLogModel(IMaintenanceRepository maintenanceRepository)
-        {
-            _maintenanceRepository = maintenanceRepository;
-        }
-
-        public List<MaintenanceLog> MaintenanceLogs { get; private set; }
-        
-        public void OnGet()
-        {
-            MaintenanceLogs = _maintenanceRepository.GetMaintenanceLogs();
-        }
+        _maintenanceRepository = maintenanceRepository;
     }
+    #endregion
+
+    #region Methods
+    public void OnGet()
+    {
+        MaintenanceLogs = _maintenanceRepository.GetMaintenanceLogs();
+    }
+    #endregion
 }
